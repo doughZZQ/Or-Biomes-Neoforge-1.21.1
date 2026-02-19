@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "or_biomes:block/palm_crown"
+  }
+}

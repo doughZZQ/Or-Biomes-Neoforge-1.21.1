@@ -1,0 +1,11 @@
+{
+  "values": [
+    "or_biomes:maple_leaves_orange_block",
+    "or_biomes:maple_leaves_red_block",
+    "or_biomes:birch_leaves_yellow_block",
+    "or_biomes:fir_leaves_green_block",
+    "or_biomes:fir_leaves_orange_block",
+    "or_biomes:palm_leaves_block",
+    "or_biomes:baobab_tree_leaves_block"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "values": [
+    "or_biomes:maple_log_block",
+    "or_biomes:fir_log_block",
+    "or_biomes:palm_log_block",
+    "or_biomes:palm_crown_block",
+    "or_biomes:baobab_tree_log_block"
+  ]
+}

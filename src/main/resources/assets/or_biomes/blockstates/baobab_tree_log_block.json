@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "or_biomes:block/baobab_tree_log_block_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "or_biomes:block/baobab_tree_log_block"
+    },
+    "axis=z": {
+      "model": "or_biomes:block/baobab_tree_log_block_horizontal",
+      "x": 90
+    }
+  }
+}

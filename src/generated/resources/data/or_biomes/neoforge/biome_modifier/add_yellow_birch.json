@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "or_biomes:cold_birch_forest_biome",
+  "features": "or_biomes:yellow_birch",
+  "step": "local_modifications"
+}

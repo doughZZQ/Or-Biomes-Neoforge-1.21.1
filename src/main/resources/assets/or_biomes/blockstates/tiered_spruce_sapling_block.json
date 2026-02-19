@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "or_biomes:block/tiered_spruce_sapling_block"
+    }
+  }
+}

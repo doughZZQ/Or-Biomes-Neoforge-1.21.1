@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "or_biomes:block/dried_silt_block" }
+  }
+}

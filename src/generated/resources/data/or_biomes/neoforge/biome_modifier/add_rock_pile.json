@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "or_biomes:maple_forest_biome",
+  "features": "or_biomes:rock_pile",
+  "step": "local_modifications"
+}

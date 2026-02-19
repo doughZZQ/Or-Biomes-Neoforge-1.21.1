@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "side": "or_biomes:block/maple_log",
+    "end": "or_biomes:block/maple_log_top",
+    "particle": "or_biomes:block/maple_log"
+  }
+}

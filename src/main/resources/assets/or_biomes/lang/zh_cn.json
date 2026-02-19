@@ -1,0 +1,29 @@
+{
+  "block.or_biomes.strata_block": "地层岩",
+  "block.or_biomes.dried_silt_block": "干淤泥",
+  "block.or_biomes.limestone_block": "石灰岩",
+  "block.or_biomes.maple_log_block": "枫树原木",
+  "block.or_biomes.maple_leaves_orange_block": "橙色枫树叶",
+  "block.or_biomes.maple_leaves_red_block": "红色枫树叶",
+  "block.or_biomes.maple_sapling_block": "枫树苗",
+  "block.or_biomes.orange_mushroom_block": "橙色蘑菇",
+  "block.or_biomes.huge_orange_mushroom_block": "巨型橙色蘑菇",
+  "block.or_biomes.orange_mushroom_stem_block": "巨型橙色蘑菇茎块",
+  "block.or_biomes.birch_leaves_yellow_block": "黄色桦树叶",
+  "block.or_biomes.yellow_birch_sapling_block": "黄色桦树苗",
+  "block.or_biomes.fir_log_block": "冷杉原木",
+  "block.or_biomes.fir_leaves_green_block": "绿色冷杉树叶",
+  "block.or_biomes.fir_leaves_orange_block": "橙色冷杉树叶",
+  "block.or_biomes.green_fir_sapling_block": "冷杉树苗",
+  "block.or_biomes.palm_log_block": "棕榈原木",
+  "block.or_biomes.palm_crown_block": "棕榈冠",
+  "block.or_biomes.palm_leaves_block": "棕榈树叶",
+  "block.or_biomes.palm_sapling_block": "棕榈树苗",
+  "block.or_biomes.baobab_tree_log_block": "猴面包树原木",
+  "block.or_biomes.baobab_tree_leaves_block": "猴面包树叶",
+  "block.or_biomes.baobab_tree_sapling_block": "猴面包树苗",
+
+  "block.or_biomes.tiered_spruce_sapling_block": "分层云杉树苗",
+
+  "itemGroup.or_biomes.custom_item_group": "起源群系 物品组"
+}

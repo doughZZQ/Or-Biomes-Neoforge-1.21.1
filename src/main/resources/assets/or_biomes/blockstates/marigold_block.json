@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "half=lower": { "model": "or_biomes:block/marigold_block_bottom" },
+    "half=upper": { "model": "or_biomes:block/marigold_block_top" }
+  }
+}

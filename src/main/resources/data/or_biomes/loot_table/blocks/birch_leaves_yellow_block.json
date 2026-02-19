@@ -1,0 +1,43 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "items": ["minecraft:shears"]
+                  }
+                }
+              ],
+              "name": "or_biomes:birch_leaves_yellow_block"
+            },
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:table_bonus",
+                  "enchantment": "minecraft:fortune",
+                  "chances": [0.05, 0.0625, 0.083333336, 0.1]
+                }
+              ],
+              "name": "or_biomes:yellow_birch_sapling_block"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

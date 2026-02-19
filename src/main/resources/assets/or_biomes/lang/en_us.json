@@ -1,0 +1,29 @@
+{
+  "block.or_biomes.strata_block": "Strata",
+  "block.or_biomes.dried_silt_block": "Dried Silt",
+  "block.or_biomes.limestone_block": "Limestone",
+  "block.or_biomes.maple_log_block": "Maple Log",
+  "block.or_biomes.maple_leaves_orange_block": "Orange Maple Leaves",
+  "block.or_biomes.maple_leaves_red_block": "Red Maple Leaves",
+  "block.or_biomes.maple_sapling_block": "Maple Sapling",
+  "block.or_biomes.orange_mushroom_block": "Orange Mushroom",
+  "block.or_biomes.huge_orange_mushroom_block": "Huge Orange Mushroom",
+  "block.or_biomes.orange_mushroom_stem_block": "Orange Mushroom Stem",
+  "block.or_biomes.birch_leaves_yellow_block": "Yellow Birch Leaves",
+  "block.or_biomes.yellow_birch_sapling_block": "Yellow Birch Sapling",
+  "block.or_biomes.fir_log_block": "Fir Log",
+  "block.or_biomes.fir_leaves_green_block": "Green Fir Leaves",
+  "block.or_biomes.fir_leaves_orange_block": "Orange Fir Leaves",
+  "block.or_biomes.green_fir_sapling_block": "Fir Sapling",
+  "block.or_biomes.palm_log_block": "Palm Log",
+  "block.or_biomes.palm_crown_block": "Palm Crown",
+  "block.or_biomes.palm_leaves_block": "Palm Leaves",
+  "block.or_biomes.palm_sapling_block": "Palm Sapling",
+  "block.or_biomes.baobab_tree_log_block": "Baobab Tree Log",
+  "block.or_biomes.baobab_tree_leaves_block": "Baobab Tree Leaves",
+  "block.or_biomes.baobab_tree_sapling_block": "Baobab Tree Sapling",
+
+  "block.or_biomes.tiered_spruce_sapling_block": "Tiered Spruce Sapling",
+
+  "itemGroup.or_biomes.custom_item_group": "Or Biomes Item Group"
+}

@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_savanna",
+  "features": "or_biomes:baobab_tree",
+  "step": "vegetal_decoration"
+}
