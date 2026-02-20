@@ -174,7 +174,7 @@ public class ModBiomeModifiers {
                         HolderSet.direct(
                                 placedFeatures.getOrThrow(ModPlacedFeatures.BAOBAB_TREE_PLACED)
                         ),
-                        GenerationStep.Decoration.VEGETAL_DECORATION
+                        GenerationStep.Decoration.LOCAL_MODIFICATIONS
                 )
         );
     }
