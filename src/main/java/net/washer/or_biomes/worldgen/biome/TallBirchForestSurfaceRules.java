@@ -2,7 +2,6 @@ package net.washer.or_biomes.worldgen.biome;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.levelgen.Noises;
 import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 
@@ -10,13 +9,13 @@ import net.minecraft.world.level.levelgen.VerticalAnchor;
  * @author 洗衣机Washer
  * @version 1.0.0
  */
-public class GlenSurfaceRules {
+public class TallBirchForestSurfaceRules {
 
     public static SurfaceRules.RuleSource makeRules() {
 
         // ===== 常用条件 =====
-        SurfaceRules.ConditionSource isGlen =
-                SurfaceRules.isBiome(ModBiomeData.GLEN_BIOME);
+        SurfaceRules.ConditionSource isTallBirchForest =
+                SurfaceRules.isBiome(ModBiomeData.TALL_BIRCH_FOREST_BIOME);
 
         SurfaceRules.ConditionSource atSurface =
                 SurfaceRules.ON_FLOOR;
@@ -30,9 +29,6 @@ public class GlenSurfaceRules {
                         0
                 );
 
-        SurfaceRules.ConditionSource waterCheck =
-                SurfaceRules.waterBlockCheck(0, 0);
-
         // ===== 方块状态 =====
         SurfaceRules.RuleSource grass =
                 SurfaceRules.state(Blocks.GRASS_BLOCK.defaultBlockState());
@@ -43,42 +39,25 @@ public class GlenSurfaceRules {
         SurfaceRules.RuleSource stone =
                 SurfaceRules.state(Blocks.STONE.defaultBlockState());
 
-        SurfaceRules.RuleSource sand =
-                SurfaceRules.state(Blocks.SAND.defaultBlockState());
-
-        SurfaceRules.RuleSource moss =
-                SurfaceRules.state(Blocks.MOSS_BLOCK.defaultBlockState());
-
         /*
          * 规则逻辑：
          *
-         * 1. 如果是幽谷：
-         *    - 水下表面 -> 沙子
+         * 1. 如果是tall_birch_forest：
          *    - 表面：
-         *         15%概率生成苔藓块
-         *         否则草方块
+         *         草方块
          *    - 次表层 -> 泥土
          *    - 深层 -> 石头
          */
 
         return SurfaceRules.sequence(
 
-                SurfaceRules.ifTrue(isGlen,
+                SurfaceRules.ifTrue(isTallBirchForest,
 
                         SurfaceRules.sequence(
 
-//                                // ===== 水下生成沙子 =====
-//                                SurfaceRules.ifTrue(waterCheck, sand),
-
                                 // ===== 表层规则 =====
                                 SurfaceRules.ifTrue(atSurface,
-
-                                        SurfaceRules.sequence(
-                                                // 15%苔藓
-//                                                SurfaceRules.ifTrue(
-//                                                        SurfaceRules.noiseCondition(Noises.PATCH, 0.15D), moss),
-                                                grass
-                                        )
+                                        SurfaceRules.sequence(grass)
                                 ),
 
                                 // ===== 次表层 =====

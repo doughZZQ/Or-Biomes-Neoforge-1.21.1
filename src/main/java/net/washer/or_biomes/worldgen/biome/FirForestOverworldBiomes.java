@@ -105,7 +105,7 @@ public class FirForestOverworldBiomes {
         BiomeDefaultFeatures.addDefaultMushrooms(genBuilder);
 
         // 调用构造返回biome
-        return FirForestOverworldBiomes(true, 0.1F, 0.3F,
+        return FirForestOverworldBiomes(true, 0.15F, 0.15F,
                 mobBuilder, genBuilder, null);
     }
 

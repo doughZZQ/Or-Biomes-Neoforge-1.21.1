@@ -6,19 +6,20 @@
       "minecraft:canyon"
     ]
   },
-  "downfall": 0.15,
+  "downfall": 0.0,
   "effects": {
-    "fog_color": 12638463,
-    "grass_color": 5422968,
+    "fog_color": 11390463,
+    "foliage_color": 5355593,
+    "grass_color": 7518822,
     "mood_sound": {
       "block_search_extent": 8,
       "offset": 2.0,
       "sound": "minecraft:ambient.cave",
       "tick_delay": 6000
     },
-    "sky_color": 7907839,
-    "water_color": 7979232,
-    "water_fog_color": 7979232
+    "sky_color": 8887252,
+    "water_color": 4224739,
+    "water_fog_color": 11390463
   },
   "features": [
     [],
@@ -73,10 +74,7 @@
     ],
     [
       "minecraft:glow_lichen",
-      "or_biomes:rock_pile",
-      "or_biomes:green_fir",
-      "or_biomes:orange_fir",
-      "or_biomes:orange_mushroom",
+      "or_biomes:tall_birch",
       "minecraft:flower_default",
       "minecraft:patch_grass_badlands",
       "minecraft:brown_mushroom_normal",
@@ -186,5 +184,5 @@
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": 0.15
+  "temperature": 0.6
 }

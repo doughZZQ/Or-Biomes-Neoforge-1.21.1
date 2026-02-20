@@ -41,6 +41,12 @@ public class ModTreeGrowers {
     public static final TreeGrower BAOBAB_TREE = new TreeGrower(OrBiomes.MOD_ID + ":baobab_tree", Optional.empty(),
             Optional.of(ModConfiguredFeatures.BAOBAB_TREE_KEY), Optional.empty());
 
+    public static final TreeGrower TALL_BIRCH = new TreeGrower(OrBiomes.MOD_ID + ":tall_birch", Optional.empty(),
+            Optional.of(ModConfiguredFeatures.TALL_BIRCH_KEY), Optional.empty());
+
+    public static final TreeGrower FROSTED_SPRUCE = new TreeGrower(OrBiomes.MOD_ID + ":frosted_spruce", Optional.empty(),
+            Optional.of(ModConfiguredFeatures.FROSTED_SPRUCE_KEY), Optional.empty());
+
 //    private static int randomInteger() {
 //        Random random = new Random();
 //        return random.nextInt(2);

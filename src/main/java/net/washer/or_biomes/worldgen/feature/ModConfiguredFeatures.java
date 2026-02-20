@@ -37,6 +37,8 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> MARIGOLD_KEY = registerKey("marigold");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TIERED_SPRUCE_KEY = registerKey("tiered_spruce");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BAOBAB_TREE_KEY = registerKey("baobab_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_BIRCH_KEY = registerKey("tall_birch");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FROSTED_SPRUCE_KEY = registerKey("frosted_spruce");
     //===================================================================
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
@@ -165,6 +167,31 @@ public class ModConfiguredFeatures {
                         new BaobabTreeTrunkPlacer(12, 2, 1),
                         BlockStateProvider.simple(ModBlocks.BAOBAB_TREE_LEAVES_BLOCK.get()),
                         new BaobabTreeFoliagePlacer(
+                                ConstantInt.of(0),
+                                ConstantInt.of(0)
+                        ),
+                        new TwoLayersFeatureSize(1, 0, 2)
+                )
+                        .ignoreVines()
+                        .build()
+        );
+
+        register(context, TALL_BIRCH_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(Blocks.BIRCH_LOG),
+                new BirchTallTrunkPlacer(8, 6, 5),
+
+                BlockStateProvider.simple(Blocks.BIRCH_LEAVES),
+                new BirchYellowFoliagePlacer(ConstantInt.of(4), ConstantInt.of(0), ConstantInt.of(3)
+                ),
+
+                new TwoLayersFeatureSize(1, 0, 1)).ignoreVines().build()
+        );
+
+        register(context, FROSTED_SPRUCE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                        BlockStateProvider.simple(Blocks.SPRUCE_LOG),
+                        new TieredSpruceTrunkPlacer(12, 2, 2),
+                        BlockStateProvider.simple(ModBlocks.FROSTED_SPRUCE_LEAVES_BLOCK.get()),
+                        new TieredSpruceFoliagePlacer(
                                 ConstantInt.of(0),
                                 ConstantInt.of(0)
                         ),

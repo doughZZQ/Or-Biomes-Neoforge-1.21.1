@@ -52,6 +52,9 @@ public class ModCreativeTab {
                 pOutput.accept(ModBlocks.BAOBAB_TREE_LOG_BLOCK.get());
                 pOutput.accept(ModBlocks.BAOBAB_TREE_LEAVES_BLOCK.get());
                 pOutput.accept(ModBlocks.BAOBAB_TREE_SAPLING_BLOCK.get());
+                pOutput.accept(ModBlocks.TALL_BIRCH_SAPLING_BLOCK.get());
+                pOutput.accept(ModBlocks.FROSTED_SPRUCE_LEAVES_BLOCK.get());
+                pOutput.accept(ModBlocks.FROSTED_SPRUCE_SAPLING_BLOCK.get());
             })
             .build());
 

@@ -14,14 +14,13 @@ import org.jetbrains.annotations.Nullable;
  * @author 洗衣机Washer
  * @version 1.0.0
  */
-// 原版的生物群系的配置位于OverworldBiomes类下。
-public class ColdBirchForestOverworldBiomes {
+public class TallBirchForestOverworldBiomes {
     // 一个辅助的函数用于根据温度判断段生物群系的天空的颜色
     protected static int calculateSkyColor(float pTemperature) {
         return rgbToColor(135, 155, 212);
     }
     // 一个构造方法 用于返回一个biome实例
-    private static Biome ColdBirchForestOverworldBiomes(
+    private static Biome TallBirchForestOverworldBiomes(
             boolean pHasPercipitation,// 是否有降水
             float pTemperature,// 温度
             float pDownfall, // 降水量
@@ -30,10 +29,12 @@ public class ColdBirchForestOverworldBiomes {
             @Nullable Music pBackgroundMusic // 生物群系背景音乐
     )
     {
-        return ColdBirchForestOverworldBiomes(pHasPercipitation, pTemperature, pDownfall, rgbToColor(121, 192, 224), rgbToColor(121, 192, 224), rgbToColor(152, 176, 72), null, pMobSpawnSettings, pGenerationSettings, pBackgroundMusic);
+        return TallBirchForestOverworldBiomes(pHasPercipitation, pTemperature, pDownfall,
+                rgbToColor(64, 118, 227), rgbToColor(173, 205, 255), rgbToColor(114, 186, 102),
+                rgbToColor(81, 184, 73), pMobSpawnSettings, pGenerationSettings, pBackgroundMusic);
     }
     // 另一个构造方法 同样返回 biome 能配置的更多
-    private static Biome ColdBirchForestOverworldBiomes(
+    private static Biome TallBirchForestOverworldBiomes(
             boolean pHasPrecipitation, //是否有下雨
             float pTemperature,// 温度
             float pDownfall, // 降水量
@@ -48,7 +49,7 @@ public class ColdBirchForestOverworldBiomes {
         BiomeSpecialEffects.Builder biomespecialeffects$builder = new BiomeSpecialEffects.Builder()
                 .waterColor(pWaterColor)
                 .waterFogColor(pWaterFogColor)
-                .fogColor(12638463)
+                .fogColor(rgbToColor(173, 205, 255))
                 .skyColor(calculateSkyColor(pTemperature))
                 .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
                 .backgroundMusic(pBackgroundMusic);
@@ -71,8 +72,8 @@ public class ColdBirchForestOverworldBiomes {
     }
 
     // 添加一个自己的生物群系，使用了一些原版的方法。具体的内容自己点到方法里面看下把，不是很难，都是一些重复的配置的内容。
-    public static Biome coldBirchForestBiome(HolderGetter<PlacedFeature> pPlacedFeatures,
-                                         HolderGetter<ConfiguredWorldCarver<?>> pWorldCarvers)
+    public static Biome tallBirchForestBiome(HolderGetter<PlacedFeature> pPlacedFeatures,
+                                             HolderGetter<ConfiguredWorldCarver<?>> pWorldCarvers)
     {
         // 创建一个MobSpawnSettings.Builder对象，用于配置生物生成设置。
         MobSpawnSettings.Builder mobBuilder = new MobSpawnSettings.Builder();
@@ -89,26 +90,19 @@ public class ColdBirchForestOverworldBiomes {
         BiomeDefaultFeatures.addDefaultOres(genBuilder);
         BiomeDefaultFeatures.addDefaultSoftDisks(genBuilder);
         // 岩石堆
-        genBuilder.addFeature(
-                GenerationStep.Decoration.VEGETAL_DECORATION,
-                ModPlacedFeatures.ROCK_PILE_PLACED);
+//        genBuilder.addFeature(
+//                GenerationStep.Decoration.VEGETAL_DECORATION,
+//                ModPlacedFeatures.ROCK_PILE_PLACED);
         // 🌳 树木（重点）
-        genBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.YELLOW_BIRCH_PLACED);
-
+        genBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.TALL_BIRCH_PLACED);
         // 🍄 地表植物
-        genBuilder.addFeature(
-                GenerationStep.Decoration.VEGETAL_DECORATION,
-                ModPlacedFeatures.ORANGE_MUSHROOM_PLACED);
-        //南瓜
-        genBuilder.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION,
-                pPlacedFeatures.getOrThrow(ModPlacedFeatures.SPARSE_PUMPKIN_PATCH));
 
         BiomeDefaultFeatures.addDefaultFlowers(genBuilder);
         BiomeDefaultFeatures.addDefaultGrass(genBuilder);
         BiomeDefaultFeatures.addDefaultMushrooms(genBuilder);
 
         // 调用构造返回biome
-        return ColdBirchForestOverworldBiomes(true, 0.25F, 0.2F,
+        return TallBirchForestOverworldBiomes(true, 0.6F, 0.0F,
                 mobBuilder, genBuilder, null);
     }
 

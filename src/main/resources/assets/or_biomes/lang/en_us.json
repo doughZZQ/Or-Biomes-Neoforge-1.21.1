@@ -22,8 +22,11 @@
   "block.or_biomes.baobab_tree_log_block": "Baobab Tree Log",
   "block.or_biomes.baobab_tree_leaves_block": "Baobab Tree Leaves",
   "block.or_biomes.baobab_tree_sapling_block": "Baobab Tree Sapling",
-
+  "block.or_biomes.marigold_block": "Marigold Block",
   "block.or_biomes.tiered_spruce_sapling_block": "Tiered Spruce Sapling",
+  "block.or_biomes.tall_birch_sapling_block": "Tall Birch Sapling",
+  "block.or_biomes.frosted_spruce_leaves_block": "Frosted Spruce Leaves",
+  "block.or_biomes.frosted_spruce_sapling_block": "Frosted Spruce Sapling",
 
   "itemGroup.or_biomes.custom_item_group": "Or Biomes Item Group"
 }

@@ -36,6 +36,7 @@ public class ModBlocks {
     //===========================================================
     public static final Supplier<BirchLeavesYellowBlock> BIRCH_LEAVES_YELLOW_BLOCK = registerBlock("birch_leaves_yellow_block", BirchLeavesYellowBlock::new);
     public static final Supplier<YellowBirchSaplingBlock> YELLOW_BIRCH_SAPLING_BLOCK = registerBlock("yellow_birch_sapling_block", YellowBirchSaplingBlock::new);
+    public static final Supplier<TallBirchSaplingBlock> TALL_BIRCH_SAPLING_BLOCK = registerBlock("tall_birch_sapling_block", TallBirchSaplingBlock::new);
 
     //===========================================================
     public static final Supplier<FirLogBlock> FIR_LOG_BLOCK = registerBlock("fir_log_block", FirLogBlock::new);
@@ -68,6 +69,10 @@ public class ModBlocks {
     public static final Supplier<BaobabTreeLogBlock> BAOBAB_TREE_LOG_BLOCK = registerBlock("baobab_tree_log_block", BaobabTreeLogBlock::new);
     public static final Supplier<BaobabTreeLeavesBlock> BAOBAB_TREE_LEAVES_BLOCK = registerBlock("baobab_tree_leaves_block", BaobabTreeLeavesBlock::new);
     public static final Supplier<BaobabTreeSaplingBlock> BAOBAB_TREE_SAPLING_BLOCK = registerBlock("baobab_tree_sapling_block", BaobabTreeSaplingBlock::new);
+
+    //===========================================================
+    public static final Supplier<FrostedSpruceLeavesBlock> FROSTED_SPRUCE_LEAVES_BLOCK = registerBlock("frosted_spruce_leaves_block", FrostedSpruceLeavesBlock::new);
+    public static final Supplier<FrostedSpruceSaplingBlock> FROSTED_SPRUCE_SAPLING_BLOCK = registerBlock("frosted_spruce_sapling_block", FrostedSpruceSaplingBlock::new);
 
     //===========================================================
 

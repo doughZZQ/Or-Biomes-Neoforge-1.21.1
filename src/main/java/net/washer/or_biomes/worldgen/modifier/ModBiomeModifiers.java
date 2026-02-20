@@ -36,6 +36,7 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_ORANGE_FIR = registerKey("add_orange_fir");
     public static final ResourceKey<BiomeModifier> ADD_TIERED_SPRUCE = registerKey("add_tiered_spruce");
     public static final ResourceKey<BiomeModifier> ADD_BAOBAB_TREE_TO_SAVANNA = registerKey("add_baobab_tree_to_savanna");
+    public static final ResourceKey<BiomeModifier> ADD_TALL_BIRCH = registerKey("add_tall_birch");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         // CF -> PF -> BM
@@ -44,6 +45,7 @@ public class ModBiomeModifiers {
         Holder<Biome> coldBirchForestBiomes = context.lookup(Registries.BIOME).getOrThrow(ModBiomeData.COLD_BIRCH_FOREST_BIOME);
         Holder<Biome> firForestBiomes = context.lookup(Registries.BIOME).getOrThrow(ModBiomeData.FIR_FOREST_BIOME);
         Holder<Biome> glenBiomes = context.lookup(Registries.BIOME).getOrThrow(ModBiomeData.GLEN_BIOME);
+        Holder<Biome> tallBirchForestBiomes = context.lookup(Registries.BIOME).getOrThrow(ModBiomeData.TALL_BIRCH_FOREST_BIOME);
 
         context.register(
                 ADD_ROCK_PILE,
@@ -172,6 +174,17 @@ public class ModBiomeModifiers {
                         context.lookup(Registries.BIOME).getOrThrow(BiomeTags.IS_SAVANNA),
                         HolderSet.direct(
                                 placedFeatures.getOrThrow(ModPlacedFeatures.BAOBAB_TREE_PLACED)
+                        ),
+                        GenerationStep.Decoration.LOCAL_MODIFICATIONS
+                )
+        );
+
+        context.register(
+                ADD_TALL_BIRCH,
+                new BiomeModifiers.AddFeaturesBiomeModifier(
+                        HolderSet.direct(tallBirchForestBiomes),
+                        HolderSet.direct(
+                                placedFeatures.getOrThrow(ModPlacedFeatures.TALL_BIRCH_PLACED)
                         ),
                         GenerationStep.Decoration.LOCAL_MODIFICATIONS
                 )

@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "or_biomes:tall_birch_forest_biome",
+  "features": "or_biomes:tall_birch",
+  "step": "local_modifications"
+}

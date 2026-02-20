@@ -6,10 +6,7 @@ import net.washer.or_biomes.blocks.ModBlocks;
 import net.washer.or_biomes.items.ModCreativeTab;
 import net.washer.or_biomes.items.ModItems;
 import net.washer.or_biomes.worldgen.ModTerraBlender;
-import net.washer.or_biomes.worldgen.biome.ColdBirchForestSurfaceRules;
-import net.washer.or_biomes.worldgen.biome.FirForestSurfaceRules;
-import net.washer.or_biomes.worldgen.biome.GlenSurfaceRules;
-import net.washer.or_biomes.worldgen.biome.MapleForestSurfaceRules;
+import net.washer.or_biomes.worldgen.biome.*;
 import net.washer.or_biomes.worldgen.feature.ModFeatureTypes;
 import net.washer.or_biomes.worldgen.tree.ModFoliagePlacerTypes;
 import net.washer.or_biomes.worldgen.tree.ModTrunkPlacerTypes;
@@ -74,6 +71,8 @@ public class OrBiomes {
             SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, OrBiomes.MOD_ID, ColdBirchForestSurfaceRules.makeRules());
             SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, OrBiomes.MOD_ID, FirForestSurfaceRules.makeRules());
             SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, OrBiomes.MOD_ID, GlenSurfaceRules.makeRules());
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, OrBiomes.MOD_ID, TallBirchForestSurfaceRules.makeRules());
+
         });
     }
 

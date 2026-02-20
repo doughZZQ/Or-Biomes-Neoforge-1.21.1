@@ -2,10 +2,7 @@ package net.washer.or_biomes.worldgen;
 
 import net.minecraft.resources.ResourceLocation;
 import net.washer.or_biomes.OrBiomes;
-import net.washer.or_biomes.worldgen.biome.ColdBirchForestOverworldRegion;
-import net.washer.or_biomes.worldgen.biome.FirForestOverworldRegion;
-import net.washer.or_biomes.worldgen.biome.GlenOverworldRegion;
-import net.washer.or_biomes.worldgen.biome.MapleForestOverworldRegion;
+import net.washer.or_biomes.worldgen.biome.*;
 import terrablender.api.Regions;
 
 /**
@@ -20,5 +17,6 @@ public class ModTerraBlender {
         Regions.register(new ColdBirchForestOverworldRegion(ResourceLocation.fromNamespaceAndPath(OrBiomes.MOD_ID,"cold_birch_forest"),3));
         Regions.register(new FirForestOverworldRegion(ResourceLocation.fromNamespaceAndPath(OrBiomes.MOD_ID,"fir_forest"),3));
         Regions.register(new GlenOverworldRegion(ResourceLocation.fromNamespaceAndPath(OrBiomes.MOD_ID,"glen"),2));
+        Regions.register(new TallBirchForestOverworldRegion(ResourceLocation.fromNamespaceAndPath(OrBiomes.MOD_ID,"tall_birch_forest"),4));
     }
 }
