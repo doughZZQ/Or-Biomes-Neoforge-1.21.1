@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "minecraft:cherry_grove",
+  "features": "minecraft:bamboo_light",
+  "step": "vegetal_decoration"
+}
