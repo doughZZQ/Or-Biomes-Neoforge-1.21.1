@@ -1,6 +1,11 @@
 {
   "type": "neoforge:add_features",
-  "biomes": "or_biomes:maple_forest_biome",
+  "biomes": [
+    "or_biomes:maple_forest_biome",
+    "or_biomes:cold_birch_forest_biome",
+    "or_biomes:fir_forest_biome",
+    "or_biomes:glen_biome"
+  ],
   "features": "or_biomes:rock_pile",
   "step": "local_modifications"
 }

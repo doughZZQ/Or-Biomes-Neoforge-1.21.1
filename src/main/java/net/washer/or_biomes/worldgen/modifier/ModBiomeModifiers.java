@@ -9,7 +9,6 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.neoforged.neoforge.common.world.BiomeModifier;
@@ -49,7 +48,7 @@ public class ModBiomeModifiers {
         context.register(
                 ADD_ROCK_PILE,
                 new BiomeModifiers.AddFeaturesBiomeModifier(
-                        HolderSet.direct(mapleForestBiomes),
+                        HolderSet.direct(mapleForestBiomes, coldBirchForestBiomes, firForestBiomes, glenBiomes),
                         HolderSet.direct(
                                 placedFeatures.getOrThrow(ModPlacedFeatures.ROCK_PILE_PLACED)
                         ),
