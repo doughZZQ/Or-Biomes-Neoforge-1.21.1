@@ -52,7 +52,6 @@ public class BirchYellowFoliagePlacer extends FoliagePlacer {
     {
         BlockPos center = attachment.pos();
 
-        // 👇 如果是顶部（radiusOffset == 0）→ 用球形
         if (attachment.radiusOffset() == 0) {
             int r = this.radius.getMaxValue();
 
@@ -75,7 +74,6 @@ public class BirchYellowFoliagePlacer extends FoliagePlacer {
             }
         }
         else {
-            // 👇 中段 & 底部 → 用 Blob 风格
             int r = Math.max(1, 3 + attachment.radiusOffset());
 
             for (int y = 0; y <= (3 - attachment.radiusOffset()); y++) {

@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-21T14:42:32.7421261	Registries
+// 1.21.1	2026-02-21T22:56:51.3875811	Registries
 3a30c6319dfc14ae7563f4082f2534fae98eed12 data/or_biomes/neoforge/biome_modifier/add_baobab_tree_to_savanna.json
 9526075c1b87c03013bece2e498be25dd9a83923 data/or_biomes/neoforge/biome_modifier/add_frosted_spruce.json
 3297a6a853130c81117fab378fef31f41d171e50 data/or_biomes/neoforge/biome_modifier/add_green_fir.json
@@ -20,6 +20,7 @@ f58851e50b8592ac140a6ab261089b4f15853e1f data/or_biomes/worldgen/biome/frosted_s
 54c6d46a452958b2b930b3038de4cbfbf26afefb data/or_biomes/worldgen/biome/maple_forest_biome.json
 2191b4ea432cc8544127ee706435aedc5187a794 data/or_biomes/worldgen/biome/tall_birch_forest_biome.json
 8596e012fd4b3ef36e52d965307c0d238e2255b1 data/or_biomes/worldgen/configured_feature/baobab_tree.json
+dd8255a7f2ad94ff4927713f46ac254b371a6bf0 data/or_biomes/worldgen/configured_feature/bayou_tree.json
 bb13f36b8541f25e414c38605824f2f963fa643a data/or_biomes/worldgen/configured_feature/frosted_spruce.json
 30367a4b7e33f6a57d949214ddb8c8afde6c5b1a data/or_biomes/worldgen/configured_feature/green_fir.json
 e94ba34fb6db8a6e69506c18e62f08188155fc38 data/or_biomes/worldgen/configured_feature/huge_orange_mushroom.json

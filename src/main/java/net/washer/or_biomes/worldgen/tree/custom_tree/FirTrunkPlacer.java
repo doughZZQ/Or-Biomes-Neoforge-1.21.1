@@ -47,6 +47,7 @@ public class FirTrunkPlacer extends TrunkPlacer {
             BlockPos pos,
             TreeConfiguration config
     ) {
+        setDirtAt(level, setter, random, pos.below(), config);
         List<FoliagePlacer.FoliageAttachment> attachments = new ArrayList<>();
 
         // 生成主干

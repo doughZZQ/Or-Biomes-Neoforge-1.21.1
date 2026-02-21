@@ -27,6 +27,9 @@
   "block.or_biomes.tall_birch_sapling_block": "Tall Birch Sapling",
   "block.or_biomes.frosted_spruce_leaves_block": "Frosted Spruce Leaves",
   "block.or_biomes.frosted_spruce_sapling_block": "Frosted Spruce Sapling",
+  "block.or_biomes.bayou_log_block": "Bayou Tree Log",
+  "block.or_biomes.bayou_leaves_block": "Bayou Tree Leaves",
+  "block.or_biomes.bayou_sapling_block": "Bayou Tree Sapling",
 
   "itemGroup.or_biomes.custom_item_group": "Or Biomes Item Group"
 }

@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "or_biomes:block/bayou_leaves_block" }
+  }
+}

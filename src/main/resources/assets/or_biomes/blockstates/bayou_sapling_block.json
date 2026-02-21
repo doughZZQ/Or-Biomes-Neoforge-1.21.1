@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "or_biomes:block/bayou_sapling_block"
+    }
+  }
+}

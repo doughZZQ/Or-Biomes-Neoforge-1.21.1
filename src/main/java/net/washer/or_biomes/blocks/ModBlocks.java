@@ -75,6 +75,11 @@ public class ModBlocks {
     public static final Supplier<FrostedSpruceSaplingBlock> FROSTED_SPRUCE_SAPLING_BLOCK = registerBlock("frosted_spruce_sapling_block", FrostedSpruceSaplingBlock::new);
 
     //===========================================================
+    public static final Supplier<BayouLogBlock> BAYOU_LOG_BLOCK = registerBlock("bayou_log_block", BayouLogBlock::new);
+    public static final Supplier<BayouLeavesBlock> BAYOU_LEAVES_BLOCK = registerBlock("bayou_leaves_block", BayouLeavesBlock::new);
+    public static final Supplier<BayouSaplingBlock> BAYOU_SAPLING_BLOCK = registerBlock("bayou_sapling_block", BayouSaplingBlock::new);
+
+    //===========================================================
 
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block){
         Supplier<T> toReturn = BLOCKS.register(name, block);

@@ -55,6 +55,9 @@ public class ModCreativeTab {
                 pOutput.accept(ModBlocks.TALL_BIRCH_SAPLING_BLOCK.get());
                 pOutput.accept(ModBlocks.FROSTED_SPRUCE_LEAVES_BLOCK.get());
                 pOutput.accept(ModBlocks.FROSTED_SPRUCE_SAPLING_BLOCK.get());
+                pOutput.accept(ModBlocks.BAYOU_LOG_BLOCK.get());
+                pOutput.accept(ModBlocks.BAYOU_LEAVES_BLOCK.get());
+                pOutput.accept(ModBlocks.BAYOU_SAPLING_BLOCK.get());
             })
             .build());
 

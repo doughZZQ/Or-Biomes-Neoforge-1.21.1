@@ -39,6 +39,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> BAOBAB_TREE_KEY = registerKey("baobab_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_BIRCH_KEY = registerKey("tall_birch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FROSTED_SPRUCE_KEY = registerKey("frosted_spruce");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BAYOU_TREE_KEY = registerKey("bayou_tree");
     //===================================================================
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
@@ -196,6 +197,20 @@ public class ModConfiguredFeatures {
                                 ConstantInt.of(0)
                         ),
                         new TwoLayersFeatureSize(1, 0, 2)
+                )
+                        .ignoreVines()
+                        .build()
+        );
+
+        register(context, BAYOU_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                        BlockStateProvider.simple(ModBlocks.BAYOU_LOG_BLOCK.get()),
+                        new BayouTrunkPlacer(16, 2, 2),
+                        BlockStateProvider.simple(ModBlocks.BAYOU_LEAVES_BLOCK.get()),
+                        new BayouFoliagePlacer(
+                                ConstantInt.of(0),
+                                ConstantInt.of(0)
+                        ),
+                        new TwoLayersFeatureSize(1, 0, 1)
                 )
                         .ignoreVines()
                         .build()

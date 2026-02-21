@@ -27,6 +27,9 @@
   "block.or_biomes.tall_birch_sapling_block": "高大桦树苗",
   "block.or_biomes.frosted_spruce_leaves_block": "霜冻云杉树叶",
   "block.or_biomes.frosted_spruce_sapling_block": "霜冻云杉树苗",
+  "block.or_biomes.bayou_log_block": "河湾树原木",
+  "block.or_biomes.bayou_leaves_block": "河湾树叶",
+  "block.or_biomes.bayou_sapling_block": "河湾树苗",
 
   "itemGroup.or_biomes.custom_item_group": "起源群系 物品组"
 }

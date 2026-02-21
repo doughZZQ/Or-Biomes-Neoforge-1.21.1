@@ -41,6 +41,10 @@ public class ModTrunkPlacerTypes {
             TRUNK_PLACERS.register("baobab_tree_trunk_placer",
                     () -> new TrunkPlacerType<>(BaobabTreeTrunkPlacer.CODEC));
 
+    public static final DeferredHolder<TrunkPlacerType<?>, TrunkPlacerType<BayouTrunkPlacer>> BAYOU_TRUNK_PLACER =
+            TRUNK_PLACERS.register("bayou_trunk_placer",
+                    () -> new TrunkPlacerType<>(BayouTrunkPlacer.CODEC));
+
 
     public static void register(IEventBus eventBus) {
         TRUNK_PLACERS.register(eventBus);

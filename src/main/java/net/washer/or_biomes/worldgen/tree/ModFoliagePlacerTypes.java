@@ -36,6 +36,10 @@ public class ModFoliagePlacerTypes {
             FOLIAGE_PLACERS.register("baobab_tree_foliage_placer",
                     () -> new FoliagePlacerType<>(BaobabTreeFoliagePlacer.CODEC));
 
+    public static final DeferredHolder<FoliagePlacerType<?>, FoliagePlacerType<BayouFoliagePlacer>> BAYOU_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("bayou_foliage_placer",
+                    () -> new FoliagePlacerType<>(BayouFoliagePlacer.CODEC));
+
 
     public static void register(IEventBus eventBus) {
         FOLIAGE_PLACERS.register(eventBus);

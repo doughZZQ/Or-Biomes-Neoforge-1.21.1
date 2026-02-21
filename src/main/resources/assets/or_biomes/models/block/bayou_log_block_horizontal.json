@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_column_horizontal",
+  "textures": {
+    "side": "or_biomes:block/bayou_log",
+    "end": "or_biomes:block/bayou_log_top",
+    "particle": "or_biomes:block/bayou_log"
+  }
+}
