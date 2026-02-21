@@ -1,13 +1,9 @@
 {
-  "feature": "or_biomes:orange_mushroom",
+  "feature": "or_biomes:frosted_spruce",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": {
-        "type": "minecraft:uniform",
-        "max_inclusive": 3,
-        "min_inclusive": 1
-      }
+      "count": 1
     },
     {
       "type": "minecraft:surface_water_depth_filter",

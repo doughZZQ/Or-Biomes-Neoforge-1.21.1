@@ -55,7 +55,7 @@ public class ModPlacedFeatures {
                 new PlacedFeature(
                         configuredFeatures.getOrThrow(ModConfiguredFeatures.ORANGE_MUSHROOM_KEY),
                         List.of(
-                                CountPlacement.of(UniformInt.of(2, 4)),  // 每区块7次
+                                CountPlacement.of(UniformInt.of(1, 3)),  // 每区块7次
                                 //PlacementUtils.countExtra(3, 0.3f, 1),
                                 SurfaceWaterDepthFilter.forMaxDepth(0),
                                 InSquarePlacement.spread(),
@@ -293,6 +293,21 @@ public class ModPlacedFeatures {
                         List.of(
                                 //RarityFilter.onAverageOnceEvery(1),
                                 CountPlacement.of(UniformInt.of(1, 2)), // 每区块尝试 1 次
+                                SurfaceWaterDepthFilter.forMaxDepth(0),
+                                InSquarePlacement.spread(),
+                                HeightmapPlacement.onHeightmap(Heightmap.Types.OCEAN_FLOOR_WG),
+                                BiomeFilter.biome()
+                        )
+                )
+        );
+
+        context.register(
+                FROSTED_SPRUCE_PLACED,
+                new PlacedFeature(
+                        configuredFeatures.getOrThrow(ModConfiguredFeatures.FROSTED_SPRUCE_KEY),
+                        List.of(
+                                //RarityFilter.onAverageOnceEvery(1),
+                                CountPlacement.of(1), // 每区块尝试 1 次
                                 SurfaceWaterDepthFilter.forMaxDepth(0),
                                 InSquarePlacement.spread(),
                                 HeightmapPlacement.onHeightmap(Heightmap.Types.OCEAN_FLOOR_WG),

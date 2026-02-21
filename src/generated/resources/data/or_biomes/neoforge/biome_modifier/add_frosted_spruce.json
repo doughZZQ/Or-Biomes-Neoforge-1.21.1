@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "or_biomes:frosted_spruce_forest_biome",
+  "features": "or_biomes:frosted_spruce",
+  "step": "local_modifications"
+}

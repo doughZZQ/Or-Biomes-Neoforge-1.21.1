@@ -30,6 +30,7 @@ public class ModBiomeData {
     public static final ResourceKey<Biome> FIR_FOREST_BIOME = register("fir_forest_biome");
     public static final ResourceKey<Biome> GLEN_BIOME = register("glen_biome");
     public static final ResourceKey<Biome> TALL_BIRCH_FOREST_BIOME = register("tall_birch_forest_biome");
+    public static final ResourceKey<Biome> FROSTED_SPRUCE_FOREST_BIOME = register("frosted_spruce_forest_biome");
 
     // 对应大的create方法
     private static ResourceKey<Biome> register(String pKey) {
@@ -48,6 +49,8 @@ public class ModBiomeData {
         register(pContext, ModBiomeData.FIR_FOREST_BIOME, FirForestOverworldBiomes.firForestBiome(placedFeatureGetter, carverGetter));
         register(pContext, ModBiomeData.GLEN_BIOME, GlenOverworldBiomes.glenBiome(placedFeatureGetter, carverGetter));
         register(pContext, ModBiomeData.TALL_BIRCH_FOREST_BIOME, TallBirchForestOverworldBiomes.tallBirchForestBiome(placedFeatureGetter, carverGetter));
+        register(pContext, ModBiomeData.FROSTED_SPRUCE_FOREST_BIOME, FrostedSpruceForestOverworldBiomes.frostedSpruceForestBiome(placedFeatureGetter, carverGetter));
+
     }
 
 

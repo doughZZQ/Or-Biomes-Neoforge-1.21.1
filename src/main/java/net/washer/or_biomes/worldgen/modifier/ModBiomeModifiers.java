@@ -37,6 +37,7 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_TIERED_SPRUCE = registerKey("add_tiered_spruce");
     public static final ResourceKey<BiomeModifier> ADD_BAOBAB_TREE_TO_SAVANNA = registerKey("add_baobab_tree_to_savanna");
     public static final ResourceKey<BiomeModifier> ADD_TALL_BIRCH = registerKey("add_tall_birch");
+    public static final ResourceKey<BiomeModifier> ADD_FROSTED_SPRUCE = registerKey("add_frosted_spruce");
 
     public static void bootstrap(BootstrapContext<BiomeModifier> context) {
         // CF -> PF -> BM
@@ -46,6 +47,7 @@ public class ModBiomeModifiers {
         Holder<Biome> firForestBiomes = context.lookup(Registries.BIOME).getOrThrow(ModBiomeData.FIR_FOREST_BIOME);
         Holder<Biome> glenBiomes = context.lookup(Registries.BIOME).getOrThrow(ModBiomeData.GLEN_BIOME);
         Holder<Biome> tallBirchForestBiomes = context.lookup(Registries.BIOME).getOrThrow(ModBiomeData.TALL_BIRCH_FOREST_BIOME);
+        Holder<Biome> frostedSpruceForestBiomes = context.lookup(Registries.BIOME).getOrThrow(ModBiomeData.FROSTED_SPRUCE_FOREST_BIOME);
 
         context.register(
                 ADD_ROCK_PILE,
@@ -116,7 +118,7 @@ public class ModBiomeModifiers {
         context.register(
                 ADD_ORANGE_MUSHROOM,
                 new BiomeModifiers.AddFeaturesBiomeModifier(
-                        HolderSet.direct(mapleForestBiomes),
+                        HolderSet.direct(mapleForestBiomes, coldBirchForestBiomes, firForestBiomes),
                         HolderSet.direct(
                                 placedFeatures.getOrThrow(ModPlacedFeatures.ORANGE_MUSHROOM_PLACED)
                         ),
@@ -185,6 +187,17 @@ public class ModBiomeModifiers {
                         HolderSet.direct(tallBirchForestBiomes),
                         HolderSet.direct(
                                 placedFeatures.getOrThrow(ModPlacedFeatures.TALL_BIRCH_PLACED)
+                        ),
+                        GenerationStep.Decoration.LOCAL_MODIFICATIONS
+                )
+        );
+
+        context.register(
+                ADD_FROSTED_SPRUCE,
+                new BiomeModifiers.AddFeaturesBiomeModifier(
+                        HolderSet.direct(frostedSpruceForestBiomes),
+                        HolderSet.direct(
+                                placedFeatures.getOrThrow(ModPlacedFeatures.FROSTED_SPRUCE_PLACED)
                         ),
                         GenerationStep.Decoration.LOCAL_MODIFICATIONS
                 )

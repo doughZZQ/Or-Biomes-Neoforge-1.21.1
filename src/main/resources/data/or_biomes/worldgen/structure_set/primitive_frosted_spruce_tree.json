@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "or_biomes:primitive_frosted_spruce_tree",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 3,
+    "separation": 1.5,
+    "salt": 123456,
+    "spread_type": "linear"
+  }
+}

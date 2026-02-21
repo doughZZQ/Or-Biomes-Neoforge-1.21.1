@@ -18,5 +18,6 @@ public class ModTerraBlender {
         Regions.register(new FirForestOverworldRegion(ResourceLocation.fromNamespaceAndPath(OrBiomes.MOD_ID,"fir_forest"),3));
         Regions.register(new GlenOverworldRegion(ResourceLocation.fromNamespaceAndPath(OrBiomes.MOD_ID,"glen"),2));
         Regions.register(new TallBirchForestOverworldRegion(ResourceLocation.fromNamespaceAndPath(OrBiomes.MOD_ID,"tall_birch_forest"),4));
+        Regions.register(new FrostedSpruceForestOverworldRegion(ResourceLocation.fromNamespaceAndPath(OrBiomes.MOD_ID,"frosted_spruce_forest"),2));
     }
 }
