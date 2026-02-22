@@ -1,12 +1,9 @@
 package net.washer.or_biomes.blocks;
 
 import net.minecraft.core.registries.Registries;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.levelgen.feature.HugeBrownMushroomFeature;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.washer.or_biomes.OrBiomes;
@@ -78,6 +75,9 @@ public class ModBlocks {
     public static final Supplier<BayouLogBlock> BAYOU_LOG_BLOCK = registerBlock("bayou_log_block", BayouLogBlock::new);
     public static final Supplier<BayouLeavesBlock> BAYOU_LEAVES_BLOCK = registerBlock("bayou_leaves_block", BayouLeavesBlock::new);
     public static final Supplier<BayouSaplingBlock> BAYOU_SAPLING_BLOCK = registerBlock("bayou_sapling_block", BayouSaplingBlock::new);
+
+    //===========================================================
+    public static final Supplier<VariantMangrovePropaguleBlock> VARIANT_MANGROVE_PROPAGULE_BLOCK = registerBlock("variant_mangrove_propagule_block", VariantMangrovePropaguleBlock::new);
 
     //===========================================================
 

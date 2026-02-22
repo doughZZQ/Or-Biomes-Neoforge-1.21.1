@@ -7,6 +7,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.Vec3i;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.LevelSimulatedReader;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
@@ -24,21 +25,21 @@ import java.util.function.BiConsumer;
  * @author 洗衣机Washer
  * @version 1.0.0
  */
-public class BayouTrunkPlacer extends TrunkPlacer {
+public class VariantMangroveTrunkPlacer extends TrunkPlacer {
 
-    public static final MapCodec<BayouTrunkPlacer> CODEC =
+    public static final MapCodec<VariantMangroveTrunkPlacer> CODEC =
             RecordCodecBuilder.mapCodec(instance ->
                     trunkPlacerParts(instance)
-                            .apply(instance, BayouTrunkPlacer::new)
+                            .apply(instance, VariantMangroveTrunkPlacer::new)
             );
 
-    public BayouTrunkPlacer(int baseHeight, int heightRandA, int heightRandB) {
+    public VariantMangroveTrunkPlacer(int baseHeight, int heightRandA, int heightRandB) {
         super(baseHeight, heightRandA, heightRandB);
     }
 
     @Override
     protected TrunkPlacerType<?> type() {
-        return ModTrunkPlacerTypes.BAYOU_TRUNK_PLACER.get();
+        return ModTrunkPlacerTypes.VARIANT_MANGROVE_TRUNK_PLACER.get();
     }
 
     @Override
@@ -46,16 +47,17 @@ public class BayouTrunkPlacer extends TrunkPlacer {
             LevelSimulatedReader level,
             BiConsumer<BlockPos, BlockState> blockSetter,
             RandomSource random,
-            int freeTreeHeight,
+            int height,
             BlockPos pos,
             TreeConfiguration config
     ) {
+
         setDirtAt(level, blockSetter, random, pos.below(), config);
         List<FoliagePlacer.FoliageAttachment> attachments = new ArrayList<>();
 
-        List<Integer> heightList = getHeightList(freeTreeHeight);
+        List<Integer> heightList = getHeightList(height);
         for (Direction dir : List.of(Direction.NORTH, Direction.SOUTH, Direction.WEST, Direction.EAST)) {
-            int hei0 = 3 + random.nextInt(2);
+            int hei0 = 3 + random.nextInt(3);
             int h = heightList.get(0);
             for (int y = h - 1; y >= 0; y--) {
                 BlockPos logPos = pos.above(y);
@@ -66,7 +68,7 @@ public class BayouTrunkPlacer extends TrunkPlacer {
                 } else {
                     pos0 = logPos.offset(oDir.getStepX() * (h - hei0), oDir.getStepY() * (h - hei0), oDir.getStepZ() * (h - hei0));
                 }
-                placeLog(level, blockSetter, random, pos0, config);
+                blockSetter.accept(pos0, Blocks.MANGROVE_ROOTS.defaultBlockState());
             }
         }
 
@@ -79,14 +81,14 @@ public class BayouTrunkPlacer extends TrunkPlacer {
         for (int i = 0; i < 2; i++) {
             BlockPos pos1 = pos.above(heightList.get(1) - 1);
             Vec3i dir0 = getBumpDir(indexList.get(i));
-            int len = 3 + random.nextInt(2);
+            int len = 2 + random.nextInt(3);
             for (int j = 1; j <= len; j++) {
-                BlockPos pos2 = pos1.offset(dir0.getX() * j, j, dir0.getZ() * j);
+                BlockPos pos2 = pos1.offset(dir0.getX() * j, j + (i * 3), dir0.getZ() * j);
                 placeLog(level, blockSetter, random, pos2, config);
                 pos2 = pos2.offset(dir0);
                 placeLog(level, blockSetter, random, pos2, config);
                 if (j == len) {
-                    attachments.add(new FoliagePlacer.FoliageAttachment(pos2, -1, false));
+                    attachments.add(new FoliagePlacer.FoliageAttachment(pos2, 0, false));
                 }
             }
         }
@@ -111,27 +113,64 @@ public class BayouTrunkPlacer extends TrunkPlacer {
         return attachments;
     }
 
+//    private void generateRoots(
+//            LevelSimulatedReader level,
+//            BiConsumer<BlockPos, BlockState> blockSetter,
+//            RandomSource random,
+//            BlockPos base,
+//            TreeConfiguration config
+//    ) {
+//
+//        int rootCount = 4;
+//
+//        for (int i = 0; i < rootCount; i++) {
+//
+//            Direction dir = Direction.Plane.HORIZONTAL.getRandomDirection(random);
+//
+//            BlockPos current = base;
+//
+//            int length = 5 + random.nextInt(3);
+//
+//            for (int j = 0; j < length; j++) {
+//
+//                current = current.relative(dir).below();
+//
+//                blockSetter.accept(
+//                        current,
+//                        Blocks.MANGROVE_ROOTS.defaultBlockState()
+//                );
+//            }
+//        }
+//
+//        // 中心竖直根
+//        for (int i = 0; i < 3; i++) {
+//            blockSetter.accept(
+//                    base.above(i),
+//                    Blocks.MANGROVE_ROOTS.defaultBlockState()
+//            );
+//        }
+//    }
 
     public static List<Integer> getHeightList(int treeHeight) {
 
         switch (treeHeight) {
-            case 16 -> {
-                return List.of(7, 10, 12, 16);
+            case 22 -> {
+                return List.of(9, 13, 18, 22);
             }
-            case 17 -> {
-                return List.of(7, 10, 13, 17);
+            case 23 -> {
+                return List.of(9, 13, 18, 23);
             }
-            case 18 -> {
-                return List.of(8, 11, 14, 18);
+            case 24 -> {
+                return List.of(9, 13, 19, 24);
             }
-            case 19 -> {
-                return List.of(8, 12, 15, 19);
+            case 25 -> {
+                return List.of(9, 13, 19, 25);
             }
-            case 20 -> {
-                return List.of(9, 13, 15, 20);
+            case 26 -> {
+                return List.of(9, 13, 20, 26);
             }
             default -> {
-                return List.of(9, 13, 15, 20);
+                return List.of(9, 13, 18, 22);
             }
         }
     }

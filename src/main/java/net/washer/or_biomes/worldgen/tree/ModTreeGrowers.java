@@ -50,6 +50,9 @@ public class ModTreeGrowers {
     public static final TreeGrower BAYOU_TREE = new TreeGrower(OrBiomes.MOD_ID + ":bayou_tree", Optional.empty(),
             Optional.of(ModConfiguredFeatures.BAYOU_TREE_KEY), Optional.empty());
 
+    public static final TreeGrower VARIANT_MANGROVE = new TreeGrower(OrBiomes.MOD_ID + ":variant_mangrove", Optional.empty(),
+            Optional.of(ModConfiguredFeatures.VARIANT_MANGROVE_KEY), Optional.empty());
+
 //    private static int randomInteger() {
 //        Random random = new Random();
 //        return random.nextInt(2);

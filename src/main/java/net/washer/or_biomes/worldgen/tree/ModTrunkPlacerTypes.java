@@ -45,6 +45,10 @@ public class ModTrunkPlacerTypes {
             TRUNK_PLACERS.register("bayou_trunk_placer",
                     () -> new TrunkPlacerType<>(BayouTrunkPlacer.CODEC));
 
+    public static final DeferredHolder<TrunkPlacerType<?>, TrunkPlacerType<VariantMangroveTrunkPlacer>> VARIANT_MANGROVE_TRUNK_PLACER =
+            TRUNK_PLACERS.register("variant_mangrove_trunk_placer",
+                    () -> new TrunkPlacerType<>(VariantMangroveTrunkPlacer.CODEC));
+
 
     public static void register(IEventBus eventBus) {
         TRUNK_PLACERS.register(eventBus);

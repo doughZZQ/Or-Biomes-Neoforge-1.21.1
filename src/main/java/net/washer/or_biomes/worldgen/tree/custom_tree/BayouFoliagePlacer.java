@@ -70,7 +70,12 @@ public class BayouFoliagePlacer extends FoliagePlacer {
                 if (y == hei - 1) radius = 1;
                 for (int x = -radius; x <= radius; x++) {
                     for (int z = -radius; z <= radius; z++) {
-                        if (x * x + z * z <= radius * radius) {
+
+                        if ((Math.abs(x) == radius && z == 0) || (Math.abs(z) == radius && x == 0)) {
+                            continue;
+                        }
+
+                        if (Math.abs(x) + Math.abs(z) <= radius) {
                             BlockPos leafPos = center.offset(x, y, z);
                             tryPlaceLeaf(level, blockSetter, random, config, leafPos);
                         }

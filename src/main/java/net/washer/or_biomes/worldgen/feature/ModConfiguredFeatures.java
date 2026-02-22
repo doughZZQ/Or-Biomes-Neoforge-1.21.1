@@ -40,6 +40,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> TALL_BIRCH_KEY = registerKey("tall_birch");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FROSTED_SPRUCE_KEY = registerKey("frosted_spruce");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BAYOU_TREE_KEY = registerKey("bayou_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> VARIANT_MANGROVE_KEY = registerKey("variant_mangrove");
     //===================================================================
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
@@ -157,8 +158,7 @@ public class ModConfiguredFeatures {
                         ConstantInt.of(0),
                         ConstantInt.of(0)
                 ),
-                new TwoLayersFeatureSize(1, 0, 2)
-        )
+                new TwoLayersFeatureSize(1, 0, 2))
                 .ignoreVines()
                 .build()
         );
@@ -171,8 +171,7 @@ public class ModConfiguredFeatures {
                                 ConstantInt.of(0),
                                 ConstantInt.of(0)
                         ),
-                        new TwoLayersFeatureSize(1, 0, 2)
-                )
+                        new TwoLayersFeatureSize(1, 0, 2))
                         .ignoreVines()
                         .build()
         );
@@ -182,8 +181,7 @@ public class ModConfiguredFeatures {
                 new BirchTallTrunkPlacer(8, 6, 5),
 
                 BlockStateProvider.simple(Blocks.BIRCH_LEAVES),
-                new BirchYellowFoliagePlacer(ConstantInt.of(4), ConstantInt.of(0), ConstantInt.of(3)
-                ),
+                new BirchYellowFoliagePlacer(ConstantInt.of(4), ConstantInt.of(0), ConstantInt.of(3)),
 
                 new TwoLayersFeatureSize(1, 0, 1)).ignoreVines().build()
         );
@@ -196,8 +194,7 @@ public class ModConfiguredFeatures {
                                 ConstantInt.of(0),
                                 ConstantInt.of(0)
                         ),
-                        new TwoLayersFeatureSize(1, 0, 2)
-                )
+                        new TwoLayersFeatureSize(1, 0, 2))
                         .ignoreVines()
                         .build()
         );
@@ -210,8 +207,20 @@ public class ModConfiguredFeatures {
                                 ConstantInt.of(0),
                                 ConstantInt.of(0)
                         ),
-                        new TwoLayersFeatureSize(1, 0, 1)
-                )
+                        new TwoLayersFeatureSize(1, 0, 1))
+                        .ignoreVines()
+                        .build()
+        );
+
+        register(context, VARIANT_MANGROVE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                        BlockStateProvider.simple(Blocks.MANGROVE_LOG),
+                        new VariantMangroveTrunkPlacer(22, 2, 2),
+                        BlockStateProvider.simple(Blocks.MANGROVE_LEAVES),
+                        new VariantMangroveFoliagePlacer(
+                                ConstantInt.of(0),
+                                ConstantInt.of(0)
+                        ),
+                        new TwoLayersFeatureSize(1, 0, 2))
                         .ignoreVines()
                         .build()
         );

@@ -30,6 +30,8 @@
   "block.or_biomes.bayou_log_block": "河湾树原木",
   "block.or_biomes.bayou_leaves_block": "河湾树叶",
   "block.or_biomes.bayou_sapling_block": "河湾树苗",
+  "block.or_biomes.variant_mangrove_propagule_block": "变体红树胎生苗",
+
 
   "itemGroup.or_biomes.custom_item_group": "起源群系 物品组"
 }

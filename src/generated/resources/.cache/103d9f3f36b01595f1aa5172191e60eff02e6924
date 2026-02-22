@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-21T22:56:51.3875811	Registries
+// 1.21.1	2026-02-22T15:20:18.8810921	Registries
 3a30c6319dfc14ae7563f4082f2534fae98eed12 data/or_biomes/neoforge/biome_modifier/add_baobab_tree_to_savanna.json
 9526075c1b87c03013bece2e498be25dd9a83923 data/or_biomes/neoforge/biome_modifier/add_frosted_spruce.json
 3297a6a853130c81117fab378fef31f41d171e50 data/or_biomes/neoforge/biome_modifier/add_green_fir.json
@@ -35,6 +35,7 @@ ba94ed41da345326be5d773a4907f101b8f03152 data/or_biomes/worldgen/configured_feat
 6676031bad58b38bf784be6e8868b13dc0a55dee data/or_biomes/worldgen/configured_feature/rock_pile.json
 7d4c46b380a40c67120eb3724249ff4d7f3f801c data/or_biomes/worldgen/configured_feature/tall_birch.json
 f314b96de1b22a8ce480ac6ea5e1df0d386fd948 data/or_biomes/worldgen/configured_feature/tiered_spruce.json
+3d51be7ca8713bdb75f06dfac83ed6106d6ad95f data/or_biomes/worldgen/configured_feature/variant_mangrove.json
 28355a19ef6ba857ef6dfe3cef16b25c8cd984b3 data/or_biomes/worldgen/configured_feature/yellow_birch.json
 c0c0f2fd7c90bef1623478d4201d72c72863e169 data/or_biomes/worldgen/placed_feature/baobab_tree.json
 b5dd9bdba26415884d2d6d592c777377064aee61 data/or_biomes/worldgen/placed_feature/dense_sunflower_patch.json
