@@ -140,7 +140,7 @@ public class ModConfiguredFeatures {
                 new TwoLayersFeatureSize(1, 0, 2)).ignoreVines().build()
         );
 
-        register(context, PALM_TREE_KEY, ModFeatureTypes.PALM_TREE.get(), NoneFeatureConfiguration.INSTANCE);
+        register(context, PALM_TREE_KEY, ModFeatureTypes.PALM_TREE.get(), new NoneFeatureConfiguration());
 
         register(context, MARIGOLD_KEY, Feature.RANDOM_PATCH,
                 FeatureUtils.simpleRandomPatchConfiguration(

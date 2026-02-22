@@ -29,7 +29,7 @@ public class ModFeatureTypes {
             MOD_FEATURES.register("rock_pile",
                     () -> new RockPileFeature(NoneFeatureConfiguration.CODEC));
 
-    public static final DeferredHolder<Feature<?>, Feature<NoneFeatureConfiguration>> PALM_TREE =
+    public static final DeferredHolder<Feature<?>, PalmTreeStructureFeature> PALM_TREE =
             MOD_FEATURES.register("palm_tree",
                     () -> new PalmTreeStructureFeature(NoneFeatureConfiguration.CODEC));
 

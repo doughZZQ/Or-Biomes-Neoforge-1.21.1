@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-22T15:20:18.8810921	Registries
+// 1.21.1	2026-02-23T01:04:07.3223312	Registries
 3a30c6319dfc14ae7563f4082f2534fae98eed12 data/or_biomes/neoforge/biome_modifier/add_baobab_tree_to_savanna.json
 9526075c1b87c03013bece2e498be25dd9a83923 data/or_biomes/neoforge/biome_modifier/add_frosted_spruce.json
 3297a6a853130c81117fab378fef31f41d171e50 data/or_biomes/neoforge/biome_modifier/add_green_fir.json
@@ -18,6 +18,7 @@ bdf2124744edcdf503416db280ad7c87ca817405 data/or_biomes/worldgen/biome/fir_fores
 f58851e50b8592ac140a6ab261089b4f15853e1f data/or_biomes/worldgen/biome/frosted_spruce_forest_biome.json
 7f03c183f7e1e621d02c903202e83d897f74d632 data/or_biomes/worldgen/biome/glen_biome.json
 54c6d46a452958b2b930b3038de4cbfbf26afefb data/or_biomes/worldgen/biome/maple_forest_biome.json
+78446d1f2075ea515cbea560e2e605fded21c44a data/or_biomes/worldgen/biome/oasis_biome.json
 2191b4ea432cc8544127ee706435aedc5187a794 data/or_biomes/worldgen/biome/tall_birch_forest_biome.json
 8596e012fd4b3ef36e52d965307c0d238e2255b1 data/or_biomes/worldgen/configured_feature/baobab_tree.json
 dd8255a7f2ad94ff4927713f46ac254b371a6bf0 data/or_biomes/worldgen/configured_feature/bayou_tree.json
@@ -47,7 +48,7 @@ fa94801f01f5bbf599d17bc3fdb4079975d37682 data/or_biomes/worldgen/placed_feature/
 06e95b1d9674079ba74628af1cf705b2afa62330 data/or_biomes/worldgen/placed_feature/orange_maple.json
 3b6372738851d820fd906a02951f343eb2cf8d70 data/or_biomes/worldgen/placed_feature/orange_maple_forked.json
 8abcabc19e9681e69b956f4806c6d7cdc5fc014a data/or_biomes/worldgen/placed_feature/orange_mushroom.json
-d11608bf8c3215f03e88e6d874f8e4540312494e data/or_biomes/worldgen/placed_feature/palm_tree.json
+312c021594697f67e88c6c974501ef435fdc3756 data/or_biomes/worldgen/placed_feature/palm_tree.json
 c33dd1193f23b33cc3f9c00c1e2553e6328f566d data/or_biomes/worldgen/placed_feature/red_maple.json
 819f148658fac5a1defb9995f5e685ab4d15df2a data/or_biomes/worldgen/placed_feature/red_maple_forked.json
 c8dbe3ad4e1afbace45c6030b2fee213f681c8e4 data/or_biomes/worldgen/placed_feature/rock_pile.json

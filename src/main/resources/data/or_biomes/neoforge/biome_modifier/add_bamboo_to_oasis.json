@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "or_biomes:oasis_biome",
+  "features": "or_biomes:rare_bamboo_oasis",
+  "step": "vegetal_decoration"
+}

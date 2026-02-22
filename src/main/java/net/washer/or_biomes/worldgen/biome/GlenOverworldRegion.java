@@ -23,6 +23,7 @@ public class GlenOverworldRegion extends Region {
         // name，维度，权重
         super(name, RegionType.OVERWORLD, weight);
     }
+
     // 重写 addBiome 方法，这个方法修改原版的主世界的维度中生成生物群系的方法
     @Override
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {

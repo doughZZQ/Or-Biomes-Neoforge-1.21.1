@@ -64,7 +64,7 @@ public class PalmTreeStructureFeature extends Feature<NoneFeatureConfiguration> 
                 Block.UPDATE_ALL
         );
 
-        return true;
+        return false;
     }
 
     private WeightedStructure getRandomStructure(RandomSource random) {

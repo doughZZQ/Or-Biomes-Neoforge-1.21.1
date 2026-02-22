@@ -1,20 +1,16 @@
 {
-  "feature": "or_biomes:palm_tree",
+  "feature": "minecraft:bamboo_no_podzol",
   "placement": [
     {
-      "type": "minecraft:surface_water_depth_filter",
-      "max_water_depth": 0
-    },
-    {
       "type": "minecraft:rarity_filter",
-      "chance": 4
+      "chance": 16
     },
     {
       "type": "minecraft:count",
       "count": {
         "type": "minecraft:uniform",
-        "max_inclusive": 1,
-        "min_inclusive": 0
+        "max_inclusive": 20,
+        "min_inclusive": 10
       }
     },
     {
@@ -22,7 +18,7 @@
     },
     {
       "type": "minecraft:heightmap",
-      "heightmap": "WORLD_SURFACE_WG"
+      "heightmap": "MOTION_BLOCKING"
     },
     {
       "type": "minecraft:biome"

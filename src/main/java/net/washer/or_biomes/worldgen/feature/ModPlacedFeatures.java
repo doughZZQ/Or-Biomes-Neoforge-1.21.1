@@ -234,7 +234,7 @@ public class ModPlacedFeatures {
                                 RarityFilter.onAverageOnceEvery(4),
                                 CountPlacement.of(UniformInt.of(0, 1)), // 每区块尝试 0~1 次
                                 InSquarePlacement.spread(),
-                                HeightmapPlacement.onHeightmap(Heightmap.Types.WORLD_SURFACE),
+                                HeightmapPlacement.onHeightmap(Heightmap.Types.WORLD_SURFACE_WG),
                                 BiomeFilter.biome()
                         )
                 )
