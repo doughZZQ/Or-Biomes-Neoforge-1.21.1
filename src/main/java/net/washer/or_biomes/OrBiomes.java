@@ -37,6 +37,7 @@ public class OrBiomes {
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public OrBiomes(IEventBus modEventBus, ModContainer modContainer) {
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -74,6 +75,7 @@ public class OrBiomes {
             SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, OrBiomes.MOD_ID, TallBirchForestSurfaceRules.makeRules());
             SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, OrBiomes.MOD_ID, FrostedSpruceForestSurfaceRules.makeRules());
             SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, OrBiomes.MOD_ID, OasisSurfaceRules.makeRules());
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, OrBiomes.MOD_ID, MangroveSwampSurfaceRules.makeRules());
 
         });
     }

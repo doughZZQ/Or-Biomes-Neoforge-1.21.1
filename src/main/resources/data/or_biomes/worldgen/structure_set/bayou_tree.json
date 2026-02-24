@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "or_biomes:bayou_tree",
+      "weight": 2
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 2,
+    "separation": 1,
+    "salt": 123456,
+    "spread_type": "linear"
+  }
+}
