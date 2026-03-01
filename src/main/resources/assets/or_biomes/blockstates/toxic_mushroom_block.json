@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "vertical_direction=up": { "model": "or_biomes:block/toxic_mushroom_up" },
+    "vertical_direction=down": { "model": "or_biomes:block/toxic_mushroom_down" }
+  }
+}

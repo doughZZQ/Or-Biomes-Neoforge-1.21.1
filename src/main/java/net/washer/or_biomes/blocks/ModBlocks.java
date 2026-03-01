@@ -80,6 +80,9 @@ public class ModBlocks {
     public static final Supplier<VariantMangrovePropaguleBlock> VARIANT_MANGROVE_PROPAGULE_BLOCK = registerBlock("variant_mangrove_propagule_block", VariantMangrovePropaguleBlock::new);
 
     //===========================================================
+    public static final Supplier<ToxicMushroomBlock> TOXIC_MUSHROOM_BLOCK = registerBlock("toxic_mushroom_block", ToxicMushroomBlock::new);
+
+    //===========================================================
 
     public static <T extends Block> Supplier<T> registerBlock(String name, Supplier<T> block){
         Supplier<T> toReturn = BLOCKS.register(name, block);

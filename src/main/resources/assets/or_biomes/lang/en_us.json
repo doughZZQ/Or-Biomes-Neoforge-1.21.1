@@ -31,6 +31,7 @@
   "block.or_biomes.bayou_leaves_block": "Bayou Tree Leaves",
   "block.or_biomes.bayou_sapling_block": "Bayou Tree Sapling",
   "block.or_biomes.variant_mangrove_propagule_block": "Variant Mangrove Propagule",
+  "block.or_biomes.toxic_mushroom_block": "Toxic Mushroom",
 
   "itemGroup.or_biomes.custom_item_group": "Or Biomes Item Group"
 }

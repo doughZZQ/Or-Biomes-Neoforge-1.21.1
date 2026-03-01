@@ -3,6 +3,7 @@ package net.washer.or_biomes;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.washer.or_biomes.blocks.ModBlocks;
+import net.washer.or_biomes.entities.ModEntities;
 import net.washer.or_biomes.items.ModCreativeTab;
 import net.washer.or_biomes.items.ModItems;
 import net.washer.or_biomes.worldgen.ModTerraBlender;
@@ -44,6 +45,7 @@ public class OrBiomes {
         //================================================
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModEntities.register(modEventBus);
         ModCreativeTab.register(modEventBus);
 
         ModTrunkPlacerTypes.register(modEventBus);
