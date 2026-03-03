@@ -78,7 +78,7 @@ public class OrBiomes {
             SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, OrBiomes.MOD_ID, FrostedSpruceForestSurfaceRules.makeRules());
             SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, OrBiomes.MOD_ID, OasisSurfaceRules.makeRules());
             SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, OrBiomes.MOD_ID, MangroveSwampSurfaceRules.makeRules());
-
+            SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, OrBiomes.MOD_ID, PrimalOakForestSurfaceRules.makeRules());
         });
     }
 

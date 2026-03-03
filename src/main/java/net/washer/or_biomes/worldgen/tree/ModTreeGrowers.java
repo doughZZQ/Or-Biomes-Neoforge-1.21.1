@@ -53,8 +53,7 @@ public class ModTreeGrowers {
     public static final TreeGrower VARIANT_MANGROVE = new TreeGrower(OrBiomes.MOD_ID + ":variant_mangrove", Optional.empty(),
             Optional.of(ModConfiguredFeatures.VARIANT_MANGROVE_KEY), Optional.empty());
 
-//    private static int randomInteger() {
-//        Random random = new Random();
-//        return random.nextInt(2);
-//    }
+    public static final TreeGrower PRIMAL_OAK = new TreeGrower(OrBiomes.MOD_ID + ":primal_oak", Optional.empty(),
+            Optional.of(ModConfiguredFeatures.PRIMAL_OAK_KEY), Optional.empty());
+
 }

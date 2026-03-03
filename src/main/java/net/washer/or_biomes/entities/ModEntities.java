@@ -22,7 +22,7 @@ public class ModEntities {
     public static final Supplier<EntityType<SledEntity>> SLED_ENTITY =
             ENTITY_TYPES.register("sled_entity",
                     () -> EntityType.Builder.of(SledEntity::new, MobCategory.MISC)
-                            .sized(1.6f, 0.8f)
+                            .sized(2f, 1f)
                             .clientTrackingRange(10)
                             .updateInterval(1)
                             .build("sled_entity"));

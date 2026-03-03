@@ -41,6 +41,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> FROSTED_SPRUCE_KEY = registerKey("frosted_spruce");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BAYOU_TREE_KEY = registerKey("bayou_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> VARIANT_MANGROVE_KEY = registerKey("variant_mangrove");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PRIMAL_OAK_KEY = registerKey("primal_oak");
     //===================================================================
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
@@ -223,6 +224,20 @@ public class ModConfiguredFeatures {
                         new TwoLayersFeatureSize(1, 0, 2))
                         .ignoreVines()
                         .build()
+        );
+
+        register(context, PRIMAL_OAK_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(Blocks.OAK_LOG),
+                new PrimalOakTrunkPlacer(5, 2, 1),
+
+                BlockStateProvider.simple(Blocks.OAK_LEAVES),
+                new PrimalOakFoliagePlacer(
+                        ConstantInt.of(4),
+                        ConstantInt.of(0)
+                ),
+                new TwoLayersFeatureSize(1, 0, 2))
+                .ignoreVines()
+                .build()
         );
     }
 

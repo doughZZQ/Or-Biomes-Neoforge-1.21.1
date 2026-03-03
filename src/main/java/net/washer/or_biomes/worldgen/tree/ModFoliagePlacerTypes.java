@@ -44,6 +44,10 @@ public class ModFoliagePlacerTypes {
             FOLIAGE_PLACERS.register("variant_mangrove_foliage_placer",
                     () -> new FoliagePlacerType<>(VariantMangroveFoliagePlacer.CODEC));
 
+    public static final DeferredHolder<FoliagePlacerType<?>, FoliagePlacerType<PrimalOakFoliagePlacer>> PRIMAL_OAK_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("primal_oak_foliage_placer",
+                    () -> new FoliagePlacerType<>(PrimalOakFoliagePlacer.CODEC));
+
 
     public static void register(IEventBus eventBus) {
         FOLIAGE_PLACERS.register(eventBus);

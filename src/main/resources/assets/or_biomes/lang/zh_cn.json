@@ -32,6 +32,8 @@
   "block.or_biomes.bayou_sapling_block": "河湾树苗",
   "block.or_biomes.variant_mangrove_propagule_block": "变体红树胎生苗",
   "block.or_biomes.toxic_mushroom_block": "毒蘑菇",
+  "block.or_biomes.primal_oak_sapling_block": "原始橡树苗",
+  "item.or_biomes.sled": "雪橇",
 
 
   "itemGroup.or_biomes.custom_item_group": "起源群系 物品组"

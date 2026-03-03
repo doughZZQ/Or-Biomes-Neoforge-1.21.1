@@ -60,6 +60,7 @@ public class ModCreativeTab {
                 pOutput.accept(ModBlocks.BAYOU_SAPLING_BLOCK.get());
                 pOutput.accept(ModBlocks.VARIANT_MANGROVE_PROPAGULE_BLOCK.get());
                 pOutput.accept(ModBlocks.TOXIC_MUSHROOM_BLOCK.get());
+                pOutput.accept(ModBlocks.PRIMAL_OAK_SAPLING_BLOCK.get());
                 pOutput.accept(ModItems.SLED.get());
             })
             .build());

@@ -2,17 +2,18 @@ package net.washer.or_biomes.entities.custom_entity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.MoverType;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
+import net.washer.or_biomes.items.ModItems;
 import org.jetbrains.annotations.Nullable;
 
 /**
@@ -20,6 +21,9 @@ import org.jetbrains.annotations.Nullable;
  * @version 1.0.0
  */
 public class SledEntity extends Entity {
+
+    private static final EntityDataAccessor<Integer> BREAK_HITS;
+    private static final EntityDataAccessor<Integer> LAST_BREAK_TICK;
 
     private static final double ACCELERATION = 0.03;
     private static final double FRICTION = 0.98;
@@ -37,17 +41,22 @@ public class SledEntity extends Entity {
 
     @Override
     protected void defineSynchedData(SynchedEntityData.Builder builder) {
-
+        builder.define(BREAK_HITS, 0);
+        builder.define(LAST_BREAK_TICK, 0);
     }
 
     @Override
     protected void readAdditionalSaveData(CompoundTag tag) {
         sledSpeed = tag.getDouble("Speed");
+        this.entityData.set(BREAK_HITS, tag.getInt("BreakHits"));
+        this.entityData.set(LAST_BREAK_TICK, tag.getInt("LastBreakTick"));
     }
 
     @Override
     protected void addAdditionalSaveData(CompoundTag tag) {
         tag.putDouble("Speed", sledSpeed);
+        tag.putInt("BreakHits", (Integer)this.entityData.get(BREAK_HITS));
+        tag.putInt("LastBreakTick", (Integer)this.entityData.get(LAST_BREAK_TICK));
     }
 
     // ===============================
@@ -64,14 +73,40 @@ public class SledEntity extends Entity {
         return InteractionResult.sidedSuccess(level().isClientSide);
     }
 
+    @Override
+    public boolean hurt(DamageSource source, float amount) {
+        if (this.isInvulnerableTo(source)) {
+            return false;
+        } else if (!this.level().isClientSide && !this.isRemoved()) {
+            Entity attacker = source.getEntity();
+            if (attacker instanceof Player) {
+                Player player = (Player)attacker;
+                int currentTick = this.tickCount;
+                int lastTick = (Integer)this.entityData.get(LAST_BREAK_TICK);
+                int hits = currentTick - lastTick > 60 ? 1 : (Integer)this.entityData.get(BREAK_HITS) + 1;
+                this.entityData.set(BREAK_HITS, hits);
+                this.entityData.set(LAST_BREAK_TICK, currentTick);
+                if (hits >= 3) {
+                    this.destroyByPlayer();
+                }
+
+                return true;
+            } else {
+                return true;
+            }
+        } else {
+            return true;
+        }
+    }
+
+    private void destroyByPlayer() {
+        this.discard();
+        this.spawnAtLocation(ModItems.SLED.get());
+    }
+
     // ===============================
     // 玩家站立位置
     // ===============================
-
-    @Override
-    public Vec3 getPassengerRidingPosition(Entity passenger) {
-        return this.position().add(0, 0.2, 0.0);
-    }
 
     @Override
     public boolean canAddPassenger(Entity entity) {
@@ -131,17 +166,37 @@ public class SledEntity extends Entity {
                 this.getZ()
         );
         BlockPos frontPos = BlockPos.containing(
-                this.getX() + forward.x,
+                this.getX() + forward.x * 1.5f,
                 this.getY(),
-                this.getZ() + forward.z
+                this.getZ() + forward.z * 1.5f
+        );
+        BlockPos frontLeftPos = BlockPos.containing(
+                this.getX() + (forward.x - forward.z) * 1.5f,
+                this.getY(),
+                this.getZ() + (forward.z + forward.x) * 1.5f
+        );
+        BlockPos frontRightPos = BlockPos.containing(
+                this.getX() + (forward.x + forward.z) * 1.5f,
+                this.getY(),
+                this.getZ() + (forward.z - forward.x) * 1.5f
         );
 
         BlockState frontBlock = level().getBlockState(frontPos);
+        BlockState frontLeftBlock = level().getBlockState(frontLeftPos);
+        BlockState frontRightBlock = level().getBlockState(frontRightPos);
         BlockState frontUpBlock = level().getBlockState(frontPos.above());
+        BlockState frontUpBlockLeft = level().getBlockState(frontLeftPos.above());
+        BlockState frontUpBlockRight = level().getBlockState(frontRightPos.above());
 
         boolean oneBlockSlope =
                 frontBlock.isSolid() &&
                         frontUpBlock.isAir();
+        boolean oneBlockSlopeL =
+                frontLeftBlock.isSolid() &&
+                        frontUpBlockLeft.isAir();
+        boolean oneBlockSlopeR =
+                frontRightBlock.isSolid() &&
+                        frontUpBlockRight.isAir();
 
         boolean wall =
                 frontBlock.isSolid() &&
@@ -172,7 +227,7 @@ public class SledEntity extends Entity {
             // ===============================
             // 上坡
             // ===============================
-            if (oneBlockSlope) {
+            if (oneBlockSlope || oneBlockSlopeL || oneBlockSlopeR) {
 
                 if (sledSpeed <= MIN_CLIMB_SPEED) {
                     sledSpeed -= 0.03; // 倒退
@@ -258,8 +313,15 @@ public class SledEntity extends Entity {
 
     @Override
     protected void positionRider(Entity passenger, MoveFunction moveFunction) {
-        Vec3 vec = this.position().add(0, 0.1, 0.0);
-        moveFunction.accept(passenger, vec.x, vec.y, vec.z);
+        if (this.hasPassenger(passenger)) {
+            Vec3 forward = Vec3.directionFromRotation(0.0F, this.getYRot());
+            double riderX = this.getX() - forward.x * 0.28;
+            double riderZ = this.getZ() - forward.z * 0.28;
+            moveFunction.accept(passenger, riderX, this.getY() + -0.06, riderZ);
+            passenger.setYRot(this.getYRot());
+            passenger.setYBodyRot(this.getYRot());
+            passenger.setYHeadRot(this.getYRot());
+        }
     }
 
     @Override
@@ -275,6 +337,11 @@ public class SledEntity extends Entity {
     @Override
     public boolean canControlVehicle() {
         return true;
+    }
+
+    static {
+        BREAK_HITS = SynchedEntityData.defineId(SledEntity.class, EntityDataSerializers.INT);
+        LAST_BREAK_TICK = SynchedEntityData.defineId(SledEntity.class, EntityDataSerializers.INT);
     }
 
 }

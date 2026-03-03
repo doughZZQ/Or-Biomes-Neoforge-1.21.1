@@ -44,6 +44,12 @@ public class ClientModEvents {
         );
     }
 
+    @SubscribeEvent
+    public static void onRegisterAdditionalModels(ModelEvent.RegisterAdditional event) {
+        event.register(ModelResourceLocation.standalone(
+                ResourceLocation.fromNamespaceAndPath(OrBiomes.MOD_ID, "item/sled_entity_base")));
+    }
+
     // ===============================
     // 可选：注册模型层（如果用LayerDefinition）
     // JSON模型不需要

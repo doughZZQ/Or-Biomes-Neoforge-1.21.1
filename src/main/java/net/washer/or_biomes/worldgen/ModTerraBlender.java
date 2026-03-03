@@ -17,9 +17,10 @@ public class ModTerraBlender {
         Regions.register(new ColdBirchForestOverworldRegion(ResourceLocation.fromNamespaceAndPath(OrBiomes.MOD_ID,"cold_birch_forest"),3));
         Regions.register(new FirForestOverworldRegion(ResourceLocation.fromNamespaceAndPath(OrBiomes.MOD_ID,"fir_forest"),3));
         Regions.register(new GlenOverworldRegion(ResourceLocation.fromNamespaceAndPath(OrBiomes.MOD_ID,"glen"),2));
-        Regions.register(new TallBirchForestOverworldRegion(ResourceLocation.fromNamespaceAndPath(OrBiomes.MOD_ID,"tall_birch_forest"),4));
+        Regions.register(new TallBirchForestOverworldRegion(ResourceLocation.fromNamespaceAndPath(OrBiomes.MOD_ID,"tall_birch_forest"),3));
         Regions.register(new FrostedSpruceForestOverworldRegion(ResourceLocation.fromNamespaceAndPath(OrBiomes.MOD_ID,"frosted_spruce_forest"),2));
         Regions.register(new OasisOverworldRegion(ResourceLocation.fromNamespaceAndPath(OrBiomes.MOD_ID,"oasis"),2));
         Regions.register(new MangroveSwampOverworldRegion(ResourceLocation.fromNamespaceAndPath(OrBiomes.MOD_ID,"mangrove_swamp"),2));
+        Regions.register(new PrimalOakForestOverworldRegion(ResourceLocation.fromNamespaceAndPath(OrBiomes.MOD_ID, "primal_oak_forest"), 4));
     }
 }

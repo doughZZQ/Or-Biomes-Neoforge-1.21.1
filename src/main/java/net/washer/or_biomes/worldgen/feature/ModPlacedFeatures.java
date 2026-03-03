@@ -38,6 +38,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> BAOBAB_TREE_PLACED = registerKey("baobab_tree");
     public static final ResourceKey<PlacedFeature> TALL_BIRCH_PLACED = registerKey("tall_birch");
     public static final ResourceKey<PlacedFeature> FROSTED_SPRUCE_PLACED = registerKey("frosted_spruce");
+    public static final ResourceKey<PlacedFeature> PRIMAL_OAK_PLACED = registerKey("primal_oak");
     //====================================================================
 
     // 向日葵：每2个区块生成一次
@@ -308,6 +309,21 @@ public class ModPlacedFeatures {
                         List.of(
                                 //RarityFilter.onAverageOnceEvery(1),
                                 CountPlacement.of(1), // 每区块尝试 1 次
+                                SurfaceWaterDepthFilter.forMaxDepth(0),
+                                InSquarePlacement.spread(),
+                                HeightmapPlacement.onHeightmap(Heightmap.Types.OCEAN_FLOOR_WG),
+                                BiomeFilter.biome()
+                        )
+                )
+        );
+
+        context.register(
+                PRIMAL_OAK_PLACED,
+                new PlacedFeature(
+                        configuredFeatures.getOrThrow(ModConfiguredFeatures.PRIMAL_OAK_KEY),
+                        List.of(
+                                //RarityFilter.onAverageOnceEvery(1),
+                                CountPlacement.of(UniformInt.of(3, 5)), // 每区块尝试 1-2 次
                                 SurfaceWaterDepthFilter.forMaxDepth(0),
                                 InSquarePlacement.spread(),
                                 HeightmapPlacement.onHeightmap(Heightmap.Types.OCEAN_FLOOR_WG),
