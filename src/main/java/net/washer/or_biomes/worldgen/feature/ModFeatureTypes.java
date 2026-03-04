@@ -8,10 +8,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.washer.or_biomes.OrBiomes;
-import net.washer.or_biomes.worldgen.feature.custom_feature.HugeOrangeMushroomFeature;
-import net.washer.or_biomes.worldgen.feature.custom_feature.OasisLakeFeature;
-import net.washer.or_biomes.worldgen.feature.custom_feature.PalmTreeStructureFeature;
-import net.washer.or_biomes.worldgen.feature.custom_feature.RockPileFeature;
+import net.washer.or_biomes.worldgen.feature.custom_feature.*;
 
 /**
  * @author 洗衣机Washer
@@ -32,6 +29,10 @@ public class ModFeatureTypes {
     public static final DeferredHolder<Feature<?>, PalmTreeStructureFeature> PALM_TREE =
             MOD_FEATURES.register("palm_tree",
                     () -> new PalmTreeStructureFeature(NoneFeatureConfiguration.CODEC));
+
+    public static final DeferredHolder<Feature<?>, WisteriaTreeStructureFeature> WISTERIA_TREE =
+            MOD_FEATURES.register("wisteria_tree",
+                    () -> new WisteriaTreeStructureFeature(NoneFeatureConfiguration.CODEC));
 
 
     public static void register(IEventBus eventBus) {

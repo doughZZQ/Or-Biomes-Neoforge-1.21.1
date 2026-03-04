@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "or_biomes:fir_log_block"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "or_biomes:fir_planks_block"
+  }
+}

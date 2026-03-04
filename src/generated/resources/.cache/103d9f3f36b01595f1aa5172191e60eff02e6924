@@ -1,4 +1,4 @@
-// 1.21.1	2026-03-02T13:34:36.0219079	Registries
+// 1.21.1	2026-03-04T23:50:02.9584577	Registries
 3a30c6319dfc14ae7563f4082f2534fae98eed12 data/or_biomes/neoforge/biome_modifier/add_baobab_tree_to_savanna.json
 9526075c1b87c03013bece2e498be25dd9a83923 data/or_biomes/neoforge/biome_modifier/add_frosted_spruce.json
 3297a6a853130c81117fab378fef31f41d171e50 data/or_biomes/neoforge/biome_modifier/add_green_fir.json
@@ -40,6 +40,7 @@ ba94ed41da345326be5d773a4907f101b8f03152 data/or_biomes/worldgen/configured_feat
 7d4c46b380a40c67120eb3724249ff4d7f3f801c data/or_biomes/worldgen/configured_feature/tall_birch.json
 f314b96de1b22a8ce480ac6ea5e1df0d386fd948 data/or_biomes/worldgen/configured_feature/tiered_spruce.json
 3d51be7ca8713bdb75f06dfac83ed6106d6ad95f data/or_biomes/worldgen/configured_feature/variant_mangrove.json
+622f9f783a7f87a5716215287d73d6a680ce49b6 data/or_biomes/worldgen/configured_feature/wisteria_tree.json
 28355a19ef6ba857ef6dfe3cef16b25c8cd984b3 data/or_biomes/worldgen/configured_feature/yellow_birch.json
 c0c0f2fd7c90bef1623478d4201d72c72863e169 data/or_biomes/worldgen/placed_feature/baobab_tree.json
 b5dd9bdba26415884d2d6d592c777377064aee61 data/or_biomes/worldgen/placed_feature/dense_sunflower_patch.json
@@ -51,7 +52,6 @@ fa94801f01f5bbf599d17bc3fdb4079975d37682 data/or_biomes/worldgen/placed_feature/
 06e95b1d9674079ba74628af1cf705b2afa62330 data/or_biomes/worldgen/placed_feature/orange_maple.json
 3b6372738851d820fd906a02951f343eb2cf8d70 data/or_biomes/worldgen/placed_feature/orange_maple_forked.json
 8abcabc19e9681e69b956f4806c6d7cdc5fc014a data/or_biomes/worldgen/placed_feature/orange_mushroom.json
-312c021594697f67e88c6c974501ef435fdc3756 data/or_biomes/worldgen/placed_feature/palm_tree.json
 c09c4ba1541ac5ba7c7351a827a79071531fb071 data/or_biomes/worldgen/placed_feature/primal_oak.json
 c33dd1193f23b33cc3f9c00c1e2553e6328f566d data/or_biomes/worldgen/placed_feature/red_maple.json
 819f148658fac5a1defb9995f5e685ab4d15df2a data/or_biomes/worldgen/placed_feature/red_maple_forked.json

@@ -26,11 +26,15 @@ public class DataGenerators {
 
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
+        DataGenerator generator = event.getGenerator();
+        PackOutput packOutput = generator.getPackOutput();
         ExistingFileHelper efh = event.getExistingFileHelper();
         var lp = event.getLookupProvider();
-        //world  gen
-        event.getGenerator().addProvider(event.includeServer(),
+        //world gen
+        generator.addProvider(event.includeServer(),
                 (DataProvider.Factory<ModDatapackProvider>) pOutput -> new ModDatapackProvider(pOutput, lp));
 
+//        generator.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(),
+//                List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lp));
     }
 }

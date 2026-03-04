@@ -4,6 +4,9 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.washer.or_biomes.OrBiomes;
@@ -26,6 +29,8 @@ public class ModBlocks {
 
     //===========================================================
     public static final Supplier<MapleLogBlock> MAPLE_LOG_BLOCK = registerBlock("maple_log_block", MapleLogBlock::new);
+    public static final Supplier<Block> MAPLE_PLANKS_BLOCK = registerBlock("maple_planks_block",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final Supplier<MapleLeavesOrangeBlock> MAPLE_LEAVES_ORANGE_BLOCK = registerBlock("maple_leaves_orange_block", MapleLeavesOrangeBlock::new);
     public static final Supplier<MapleLeavesRedBlock> MAPLE_LEAVES_RED_BLOCK = registerBlock("maple_leaves_red_block", MapleLeavesRedBlock::new);
     public static final Supplier<MapleSaplingBlock> MAPLE_SAPLING_BLOCK = registerBlock("maple_sapling_block", MapleSaplingBlock::new);
@@ -37,6 +42,8 @@ public class ModBlocks {
 
     //===========================================================
     public static final Supplier<FirLogBlock> FIR_LOG_BLOCK = registerBlock("fir_log_block", FirLogBlock::new);
+    public static final Supplier<Block> FIR_PLANKS_BLOCK = registerBlock("fir_planks_block",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final Supplier<FirLeavesGreenBlock> FIR_LEAVES_GREEN_BLOCK = registerBlock("fir_leaves_green_block", FirLeavesGreenBlock::new);
     public static final Supplier<FirLeavesOrangeBlock> FIR_LEAVES_ORANGE_BLOCK = registerBlock("fir_leaves_orange_block", FirLeavesOrangeBlock::new);
     public static final Supplier<GreenFirSaplingBlock> GREEN_FIR_SAPLING_BLOCK = registerBlock("green_fir_sapling_block", GreenFirSaplingBlock::new);
@@ -52,6 +59,8 @@ public class ModBlocks {
 
     //===========================================================
     public static final Supplier<PalmLogBlock> PALM_LOG_BLOCK = registerBlock("palm_log_block", PalmLogBlock::new);
+    public static final Supplier<Block> PALM_PLANKS_BLOCK = registerBlock("palm_planks_block",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final Supplier<PalmCrownBlock> PALM_CROWN_BLOCK = registerBlock("palm_crown_block", PalmCrownBlock::new);
     public static final Supplier<PalmLeavesBlock> PALM_LEAVES_BLOCK = registerBlock("palm_leaves_block", PalmLeavesBlock::new);
     public static final Supplier<PalmSaplingBlock> PALM_SAPLING_BLOCK = registerBlock("palm_sapling_block", PalmSaplingBlock::new);
@@ -64,6 +73,8 @@ public class ModBlocks {
 
     //===========================================================
     public static final Supplier<BaobabTreeLogBlock> BAOBAB_TREE_LOG_BLOCK = registerBlock("baobab_tree_log_block", BaobabTreeLogBlock::new);
+    public static final Supplier<Block> BAOBAB_PLANKS_BLOCK = registerBlock("baobab_planks_block",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final Supplier<BaobabTreeLeavesBlock> BAOBAB_TREE_LEAVES_BLOCK = registerBlock("baobab_tree_leaves_block", BaobabTreeLeavesBlock::new);
     public static final Supplier<BaobabTreeSaplingBlock> BAOBAB_TREE_SAPLING_BLOCK = registerBlock("baobab_tree_sapling_block", BaobabTreeSaplingBlock::new);
 
@@ -73,6 +84,8 @@ public class ModBlocks {
 
     //===========================================================
     public static final Supplier<BayouLogBlock> BAYOU_LOG_BLOCK = registerBlock("bayou_log_block", BayouLogBlock::new);
+    public static final Supplier<Block> BAYOU_PLANKS_BLOCK = registerBlock("bayou_planks_block",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
     public static final Supplier<BayouLeavesBlock> BAYOU_LEAVES_BLOCK = registerBlock("bayou_leaves_block", BayouLeavesBlock::new);
     public static final Supplier<BayouSaplingBlock> BAYOU_SAPLING_BLOCK = registerBlock("bayou_sapling_block", BayouSaplingBlock::new);
 
@@ -81,9 +94,49 @@ public class ModBlocks {
 
     //===========================================================
     public static final Supplier<ToxicMushroomBlock> TOXIC_MUSHROOM_BLOCK = registerBlock("toxic_mushroom_block", ToxicMushroomBlock::new);
+    public static final Supplier<HugeToxicMushroomBlock> HUGE_TOXIC_MUSHROOM_BLOCK = registerBlock("huge_toxic_mushroom_block", HugeToxicMushroomBlock::new);
+    public static final Supplier<ToxicMushroomStemBlock> TOXIC_MUSHROOM_STEM_BLOCK = registerBlock("toxic_mushroom_stem_block", ToxicMushroomStemBlock::new);
 
     //===========================================================
     public static final Supplier<PrimalOakSaplingBlock> PRIMAL_OAK_SAPLING_BLOCK = registerBlock("primal_oak_sapling_block", PrimalOakSaplingBlock::new);
+
+    //===========================================================
+    public static final Supplier<WisteriaLogBlock> WISTERIA_LOG_BLOCK = registerBlock("wisteria_log_block", WisteriaLogBlock::new);
+    public static final Supplier<WisteriaLeavesWhiteBlock> WISTERIA_LEAVES_WHITE_BLOCK = registerBlock("wisteria_leaves_white_block", WisteriaLeavesWhiteBlock::new);
+    public static final Supplier<WisteriaLeavesBlueBlock> WISTERIA_LEAVES_BLUE_BLOCK = registerBlock("wisteria_leaves_blue_block", WisteriaLeavesBlueBlock::new);
+    public static final Supplier<WisteriaLeavesPurpleBlock> WISTERIA_LEAVES_PURPLE_BLOCK = registerBlock("wisteria_leaves_purple_block", WisteriaLeavesPurpleBlock::new);
+    public static final Supplier<WisteriaLeavesPinkBlock> WISTERIA_LEAVES_PINK_BLOCK = registerBlock("wisteria_leaves_pink_block", WisteriaLeavesPinkBlock::new);
+    public static final Supplier<WisteriaSaplingBlock> WISTERIA_SAPLING_BLOCK = registerBlock("wisteria_sapling_block", WisteriaSaplingBlock::new);
+    public static final Supplier<Block> WISTERIA_PLANKS_BLOCK = registerBlock("wisteria_planks_block",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)));
+
+    //===========================================================
+    public static final Supplier<Block> BIRCH_PAPER_LANTERN_BLOCK = registerBlock("birch_paper_lantern_block",
+            () -> new Block(BlockBehaviour.Properties.of().lightLevel(l -> 15).strength(0.3F).sound(SoundType.WOOD)));
+    public static final Supplier<Block> JUNGLE_PAPER_LANTERN_BLOCK = registerBlock("jungle_paper_lantern_block",
+            () -> new Block(BlockBehaviour.Properties.of().lightLevel(l -> 15).strength(0.3F).sound(SoundType.WOOD)));
+    public static final Supplier<Block> MAPLE_PAPER_LANTERN_BLOCK = registerBlock("maple_paper_lantern_block",
+            () -> new Block(BlockBehaviour.Properties.of().lightLevel(l -> 15).strength(0.3F).sound(SoundType.WOOD)));
+    public static final Supplier<Block> MANGROVE_PAPER_LANTERN_BLOCK = registerBlock("mangrove_paper_lantern_block",
+            () -> new Block(BlockBehaviour.Properties.of().lightLevel(l -> 15).strength(0.3F).sound(SoundType.WOOD)));
+    public static final Supplier<Block> BAOBAB_PAPER_LANTERN_BLOCK = registerBlock("baobab_paper_lantern_block",
+            () -> new Block(BlockBehaviour.Properties.of().lightLevel(l -> 15).strength(0.3F).sound(SoundType.WOOD)));
+    public static final Supplier<Block> ACACIA_PAPER_LANTERN_BLOCK = registerBlock("acacia_paper_lantern_block",
+            () -> new Block(BlockBehaviour.Properties.of().lightLevel(l -> 15).strength(0.3F).sound(SoundType.WOOD)));
+    public static final Supplier<Block> FIR_PAPER_LANTERN_BLOCK = registerBlock("fir_paper_lantern_block",
+            () -> new Block(BlockBehaviour.Properties.of().lightLevel(l -> 15).strength(0.3F).sound(SoundType.WOOD)));
+    public static final Supplier<Block> DARK_OAK_PAPER_LANTERN_BLOCK = registerBlock("dark_oak_paper_lantern_block",
+            () -> new Block(BlockBehaviour.Properties.of().lightLevel(l -> 15).strength(0.3F).sound(SoundType.WOOD)));
+    public static final Supplier<Block> OAK_PAPER_LANTERN_BLOCK = registerBlock("oak_paper_lantern_block",
+            () -> new Block(BlockBehaviour.Properties.of().lightLevel(l -> 15).strength(0.3F).sound(SoundType.WOOD)));
+    public static final Supplier<Block> CHERRY_PAPER_LANTERN_BLOCK = registerBlock("cherry_paper_lantern_block",
+            () -> new Block(BlockBehaviour.Properties.of().lightLevel(l -> 15).strength(0.3F).sound(SoundType.WOOD)));
+    public static final Supplier<Block> BAMBOO_PAPER_LANTERN_BLOCK = registerBlock("bamboo_paper_lantern_block",
+            () -> new Block(BlockBehaviour.Properties.of().lightLevel(l -> 15).strength(0.3F).sound(SoundType.WOOD)));
+    public static final Supplier<Block> PALM_PAPER_LANTERN_BLOCK = registerBlock("palm_paper_lantern_block",
+            () -> new Block(BlockBehaviour.Properties.of().lightLevel(l -> 15).strength(0.3F).sound(SoundType.WOOD)));
+    public static final Supplier<Block> WISTERIA_PAPER_LANTERN_BLOCK = registerBlock("wisteria_paper_lantern_block",
+            () -> new Block(BlockBehaviour.Properties.of().lightLevel(l -> 15).strength(0.3F).sound(SoundType.WOOD)));
 
     //===========================================================
 
@@ -103,7 +156,7 @@ public class ModBlocks {
 
 
     public static void register(IEventBus eventBus) {
-        //Blocks.PINK_PETALS
+        //Blocks.OAK_PLANKS
         BLOCKS.register(eventBus);
     }
 }

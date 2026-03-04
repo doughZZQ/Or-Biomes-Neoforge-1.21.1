@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "side": "or_biomes:block/jungle_paper_lantern_side",
+    "end": "or_biomes:block/jungle_paper_lantern_top",
+    "particle": "or_biomes:block/jungle_paper_lantern_side"
+  }
+}

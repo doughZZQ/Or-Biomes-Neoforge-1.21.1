@@ -13,6 +13,7 @@ import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.client.resources.model.BakedModel;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 import net.washer.or_biomes.OrBiomes;
@@ -50,10 +51,11 @@ public class SledEntityRenderer extends EntityRenderer<SledEntity> {
 
         poseStack.pushPose();
 
-        poseStack.mulPose(Axis.YP.rotationDegrees(180.0f - entity.getYRot()));
+        poseStack.mulPose(Axis.YP.rotationDegrees(180.0F - Mth.lerp(partialTick, entity.yRotO, entity.getYRot())));
         poseStack.mulPose(Axis.XP.rotationDegrees(entity.getSledPitch() + entity.getSledRoll()));
+        //poseStack.mulPose(Axis.XP.rotationDegrees(Mth.lerp(partialTick, entity.xRotO, entity.getXRot())));
         //poseStack.mulPose(Axis.ZP.rotationDegrees(180.0f));
-        poseStack.translate(0.0F, 0.8F, -0.4F);
+        poseStack.translate(0.0F, 0.8F, 0.0F);
         poseStack.scale(1.6F, 1.6F, 1.6F);
 
         this.itemRenderer.render(stack, ItemDisplayContext.FIXED, false, poseStack, buffer, packedLight, 0, baseModel);

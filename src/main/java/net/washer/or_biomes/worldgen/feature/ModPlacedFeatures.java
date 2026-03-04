@@ -32,7 +32,7 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> ORANGE_MUSHROOM_PLACED = registerKey("orange_mushroom");
     public static final ResourceKey<PlacedFeature> GREEN_FIR_PLACED = registerKey("green_fir");
     public static final ResourceKey<PlacedFeature> ORANGE_FIR_PLACED = registerKey("orange_fir");
-    public static final ResourceKey<PlacedFeature> PALM_TREE_PLACED = registerKey("palm_tree");
+//    public static final ResourceKey<PlacedFeature> PALM_TREE_PLACED = registerKey("palm_tree");
     public static final ResourceKey<PlacedFeature> MARIGOLD_PLACED = registerKey("marigold");
     public static final ResourceKey<PlacedFeature> TIERED_SPRUCE_PLACED = registerKey("tiered_spruce");
     public static final ResourceKey<PlacedFeature> BAOBAB_TREE_PLACED = registerKey("baobab_tree");
@@ -226,20 +226,20 @@ public class ModPlacedFeatures {
                 )
         );
 
-        context.register(
-                PALM_TREE_PLACED,
-                new PlacedFeature(
-                        configuredFeatures.getOrThrow(ModConfiguredFeatures.PALM_TREE_KEY),
-                        List.of(
-                                SurfaceWaterDepthFilter.forMaxDepth(0),
-                                RarityFilter.onAverageOnceEvery(4),
-                                CountPlacement.of(UniformInt.of(0, 1)), // 每区块尝试 0~1 次
-                                InSquarePlacement.spread(),
-                                HeightmapPlacement.onHeightmap(Heightmap.Types.WORLD_SURFACE_WG),
-                                BiomeFilter.biome()
-                        )
-                )
-        );
+//        context.register(
+//                PALM_TREE_PLACED,
+//                new PlacedFeature(
+//                        configuredFeatures.getOrThrow(ModConfiguredFeatures.PALM_TREE_KEY),
+//                        List.of(
+//                                SurfaceWaterDepthFilter.forMaxDepth(0),
+//                                RarityFilter.onAverageOnceEvery(4),
+//                                CountPlacement.of(UniformInt.of(0, 1)), // 每区块尝试 0~1 次
+//                                InSquarePlacement.spread(),
+//                                HeightmapPlacement.onHeightmap(Heightmap.Types.WORLD_SURFACE_WG),
+//                                BiomeFilter.biome()
+//                        )
+//                )
+//        );
 
         context.register(
                 MARIGOLD_PLACED,

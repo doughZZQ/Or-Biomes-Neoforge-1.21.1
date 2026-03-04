@@ -42,6 +42,7 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> BAYOU_TREE_KEY = registerKey("bayou_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> VARIANT_MANGROVE_KEY = registerKey("variant_mangrove");
     public static final ResourceKey<ConfiguredFeature<?, ?>> PRIMAL_OAK_KEY = registerKey("primal_oak");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WISTERIA_TREE_KEY = registerKey("wisteria_tree");
     //===================================================================
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
@@ -239,6 +240,8 @@ public class ModConfiguredFeatures {
                 .ignoreVines()
                 .build()
         );
+
+        register(context, WISTERIA_TREE_KEY, ModFeatureTypes.WISTERIA_TREE.get(), new NoneFeatureConfiguration());
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

@@ -239,8 +239,8 @@ public class SledEntity extends Entity {
                 moveY += move;
                 moveZ = forward.z * move;
 
-                sledPitch = (float) (Math.abs(forward.z) * 45f);
-                sledRoll = (float) (Math.abs(forward.x) * 45f);
+                sledPitch = (float) (Math.abs(forward.z) * 30f);
+                sledRoll = (float) (Math.abs(forward.x) * 30f);
             }
             // ===============================
             // 下坡
@@ -253,8 +253,8 @@ public class SledEntity extends Entity {
                 moveY -= move;
                 moveZ = forward.z * move;
 
-                sledPitch = (float) (Math.abs(forward.z) * -45f);
-                sledRoll = (float) (Math.abs(forward.x) * -45f);
+                sledPitch = (float) (Math.abs(forward.z) * -30f);
+                sledRoll = (float) (Math.abs(forward.x) * -30f);
 
                 //sledSpeed += 0.02; // 重力加速
             }
@@ -281,8 +281,8 @@ public class SledEntity extends Entity {
                 moveY += move;
                 moveZ = forward.z * move;
 
-                sledPitch = (float) (Math.abs(forward.z) * 45f);
-                sledRoll = (float) (Math.abs(forward.x) * 45f);
+                sledPitch = (float) (Math.abs(forward.z) * 30f);
+                sledRoll = (float) (Math.abs(forward.x) * 30f);
             }
             else {
 

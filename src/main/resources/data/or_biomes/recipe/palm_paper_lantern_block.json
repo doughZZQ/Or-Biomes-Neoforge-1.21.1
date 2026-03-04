@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "R": {
+      "item": "or_biomes:palm_planks_block"
+    },
+    "T": {
+      "item": "minecraft:paper"
+    },
+    "X": {
+      "item": "minecraft:torch"
+    }
+  },
+  "pattern": [
+    "#R#",
+    "TXT",
+    "#R#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "or_biomes:palm_paper_lantern_block"
+  }
+}

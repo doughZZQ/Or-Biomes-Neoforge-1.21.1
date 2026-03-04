@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "R": {
+      "item": "minecraft:jungle_planks"
+    },
+    "T": {
+      "item": "minecraft:paper"
+    },
+    "X": {
+      "item": "minecraft:torch"
+    }
+  },
+  "pattern": [
+    "#R#",
+    "TXT",
+    "#R#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "or_biomes:jungle_paper_lantern_block"
+  }
+}

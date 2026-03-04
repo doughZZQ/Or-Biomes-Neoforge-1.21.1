@@ -8,6 +8,10 @@
     "or_biomes:palm_leaves_block",
     "or_biomes:baobab_tree_leaves_block",
     "or_biomes:frosted_spruce_leaves_block",
-    "or_biomes:bayou_leaves_block"
+    "or_biomes:bayou_leaves_block",
+    "or_biomes:wisteria_leaves_white_block",
+    "or_biomes:wisteria_leaves_blue_block",
+    "or_biomes:wisteria_leaves_purple_block",
+    "or_biomes:wisteria_leaves_pink_block"
   ]
 }

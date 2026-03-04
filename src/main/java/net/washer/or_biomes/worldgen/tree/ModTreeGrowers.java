@@ -56,4 +56,7 @@ public class ModTreeGrowers {
     public static final TreeGrower PRIMAL_OAK = new TreeGrower(OrBiomes.MOD_ID + ":primal_oak", Optional.empty(),
             Optional.of(ModConfiguredFeatures.PRIMAL_OAK_KEY), Optional.empty());
 
+    public static final TreeGrower WISTERIA_TREE = new TreeGrower(OrBiomes.MOD_ID + ":wisteria_tree", Optional.empty(),
+            Optional.of(ModConfiguredFeatures.WISTERIA_TREE_KEY), Optional.empty());
+
 }
